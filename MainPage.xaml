@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="Statusbits.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Statusbits"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <StackPanel>
+            <CheckBox x:Name="Option1CheckBox" Content="Option 1" Margin="24,0,0,0" 
+              Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+            <CheckBox x:Name="Option2CheckBox" Content="Option 2" Margin="24,0,0,0" 
+              Checked="Option_Checked" Unchecked="Option_Unchecked" IsChecked="True"/>
+            <CheckBox x:Name="Option3CheckBox" Content="Option 3" Margin="24,0,0,0"
+              Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+        </StackPanel>
+
+
+
+    </Grid>
+
+
+</Page>
