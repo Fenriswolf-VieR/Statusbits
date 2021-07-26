@@ -122,9 +122,10 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StatusbitsController.cs" />
-    <Compile Include="StatusbitsModel.cs" />
+    <Compile Include="Controller\StatusbitsController.cs" />
+    <Compile Include="Model\StatusbitsModel.cs" />
     <Compile Include="StatusbitsView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +157,23 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.12</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="BitDecryption\BitDecryption.csproj">
+      <Project>{ca73c00e-3ca3-4dc1-8416-6d43a32950f3}</Project>
+      <Name>BitDecryption</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings_en.resw">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </PRIResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings_de.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="version\1000.resw" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
