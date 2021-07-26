@@ -10,18 +10,80 @@
 
     <Grid>
 
-        <StackPanel>
-            <CheckBox x:Name="Option1CheckBox" Content="Option 1" Margin="24,0,0,0" 
-              Checked="Option_Checked" Unchecked="Option_Unchecked"/>
-            <CheckBox x:Name="Option2CheckBox" Content="Option 2" Margin="24,0,0,0" 
-              Checked="Option_Checked" Unchecked="Option_Unchecked" IsChecked="True"/>
-            <CheckBox x:Name="Option3CheckBox" Content="Option 3" Margin="24,0,0,0"
-              Checked="Option_Checked" Unchecked="Option_Unchecked"/>
+        <StackPanel Orientation="Horizontal">
+            <ComboBox x:Name="Test" 
+                      Header="Scan from Clipboard:"
+                      Margin="10,10,0,0"
+                      Width="200"
+                      ItemsSource="{x:Bind Path=clipBoardOptions}" 
+                      SelectedIndex="0" 
+                      SelectionChanged="TypeComboBox_OnSelectionChanged"/>
+
         </StackPanel>
 
+        <RadioButton x:Name="Bit32" Content="32 Bit" Margin="320,33,0,0" VerticalAlignment="Top" Height="30" Width="50" IsChecked="False" MinWidth="70"/>
+        <RadioButton x:Name="Bit64" Content="64 Bit" Margin="230,33,0,0" VerticalAlignment="Top" Height="30" Width="60" IsChecked="True" MinWidth="70"/>
+
+        <StackPanel>
+            <ListView Margin="10,100,0,0" 
+                      Name="StatusBitsList"
+                      Width="1004"
+                      Height="500" 
+                      ItemsSource="{x:Bind Path=statusBits}" 
+                      SelectionMode="Multiple" 
+                      HorizontalAlignment="Left">
+                <CheckBox x:Name="checkBox"/>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel>
 
 
+        </StackPanel>
+
+        <TextBox Text="{x:Bind Path=Decimal}" 
+                 Name="DecimalTB"
+                 KeyDown="DecimalTB_OnKeyDown"
+                 TextWrapping="Wrap" 
+                 Width="200"
+                 Margin="10,620,0,0" 
+                 Header="Decimal:" 
+                 HorizontalAlignment="Left" 
+                 VerticalAlignment="Top"
+                 Height="55.2"/>
+        <TextBox Text="{x:Bind Path=SignedDecimal}" 
+                 Name="SignedDecimalTB"
+                 KeyDown="SignedDecimalTB_OnKeyDown"
+                 TextWrapping="Wrap" 
+                 Width="200" 
+                 Header="Signed Decimal:" 
+                 HorizontalContentAlignment="Center" 
+                 Margin="216,620,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Height="55.2">
+        </TextBox>
+        <TextBox Text="{x:Bind Path=Hexadecimal}"
+                 Name="HexadecimalTB"
+                 KeyDown="HexadecimalTB_OnKeyDown"
+                 TextWrapping="Wrap" 
+                 Width="200" 
+                 Header="Hexadecimal:"
+                 HorizontalContentAlignment="Center"
+                 Margin="421,620,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Height="55.2"/>
+        <TextBox Text="{x:Bind Path=Binary}" 
+                 Name="BinaryTB"
+                 KeyDown="BinaryTB_OnKeyDown"
+                 TextWrapping="Wrap" 
+                 Header="Binary:" 
+                 HorizontalContentAlignment="Center"
+                 Margin="625,620,7,89" UseLayoutRounding="False" Height="55.2" Width="390"/>
+        <TextBox Text="" 
+                 TextWrapping="Wrap" 
+                 Width="200" 
+                 Header="Cause of transmission:" 
+                 HorizontalContentAlignment="Center" 
+                 Margin="10,690,811,15" IsReadOnly="True" Height="59.2"/>
+        <TextBox Text="" 
+                 TextWrapping="Wrap" 
+                 HorizontalContentAlignment="Center" 
+                 Margin="215,713,7,15" IsReadOnly="True" Width="800" Height="36"/>
     </Grid>
-
-
 </Page>
