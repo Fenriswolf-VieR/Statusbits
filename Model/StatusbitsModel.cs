@@ -1,67 +1,96 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Windows.ApplicationModel.Resources;
 using Statusbits.Annotations;
 
 namespace Statusbits.Model
 {
-    public class StatusbitsModel : INotifyPropertyChanged
+  public class StatusbitsModel : INotifyPropertyChanged
+  {
+
+    private string _version;
+    public string Version
     {
-        private ResourceLoader Bits;
-
-        public string Version = "1000";
-        public string Decimal { get; set; } = "0";
-        public string SignedDecimal { get; set; } = "0";
-        public string Hexadecimal { get; set; } = "0";
-        public string Binary { get; set; } = "0";
-
-        public int Bit { get; set; } = 64;
-
-        public string CalculationType { get; set; }
-
-        public string Language { get; set; } = "en";
-
-        public List<string> StatusBits { get; set; }
-
-        public List<string> ClipboardOptions { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        public StatusbitsModel()
-        {
-            ClipboardOptions = new List<string>();
-            StatusBits = new List<string>();
-
-            ClipboardOptions.Add("no");
-            ClipboardOptions.Add("hexadecimal");
-            ClipboardOptions.Add("decimal");
-            ClipboardOptions.Add("binary");
-            ClipboardOptions.Add("signed decimal");
-
-            Bits = new ResourceLoader(Version);
-            for (var i = 0; i < Bit; i++)
-            {
-                StatusBits.Add(i.ToString() + " " + Bits.GetString(i.ToString()));
-            }
-        }
-
-        public void UpdateVersion(string version)
-        {
-            this.Version = version;
-
-            Bits = new ResourceLoader(version);
-            StatusBits.RemoveRange(0, Bit);
-            for (int i = 0; i < Bit; i++)
-            {
-                StatusBits.Add(i.ToString() + " " + Bits.GetString(i.ToString()));
-            }
-        }
+      get => _version;
+      set { _version = value; OnPropertyChanged(nameof(Version)); }
     }
+
+    private int _bit;
+    public int Bit
+    {
+      get => _bit;
+      set { _bit = value; OnPropertyChanged(nameof(Bit)); }
+    }
+
+    private string _calculationType;
+    public string CalculationType
+    {
+      get => _calculationType;
+      set { _calculationType = value; OnPropertyChanged(nameof(CalculationType)); }
+    }
+
+    private string _language;
+    public string Language
+    {
+      get => _language;
+      set { _language = value; OnPropertyChanged(nameof(Language)); }
+    }
+
+    private int _cotValue;
+    public int CotValue
+    {
+      get => _cotValue;
+      set { _cotValue = value; OnPropertyChanged(nameof(CotValue)); }
+    }
+
+    private string _cotMessage;
+    public string CotMessage
+    {
+      get => _cotMessage;
+      set { _cotMessage = value; OnPropertyChanged(nameof(CotMessage)); }
+    }
+
+    private List<string> _cotMessages = new List<string>();
+    public List<string> CotMessages
+    {
+      get => _cotMessages;
+      set { _cotMessages = value; OnPropertyChanged(nameof(CotMessages)); }
+    }
+
+    private List<string> _statusBits = new List<string>();
+    public List<string> StatusBits
+    {
+      get => _statusBits;
+      set { _statusBits = value; OnPropertyChanged(nameof(StatusBits)); }
+    }
+
+    private List<string> _clipboardOptions = new List<string>();
+    public List<string> ClipboardOptions
+    {
+      get => _clipboardOptions;
+      set { _clipboardOptions = value; OnPropertyChanged(nameof(ClipboardOptions)); }
+    }
+
+    private List<string> _values = new List<string>();
+    public List<string> Values
+    {
+      get => _values;
+      set { _values = value; OnPropertyChanged(nameof(Values)); }
+    }
+
+    private IList<object> _items = new List<object>();
+    public IList<object> Items
+    {
+      get => _items;
+      set { _items = value; OnPropertyChanged(nameof(Items)); }
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    [NotifyPropertyChangedInvocator]
+    protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    {
+      PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+  }
 }

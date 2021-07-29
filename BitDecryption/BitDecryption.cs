@@ -1,126 +1,175 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
 
 namespace BitDecryption
 {
     public class BitDecryption
     {
-
         private string binary;
         private string hex;
         private string signedDec;
         private string dec;
 
-        //Calculate the binary, hexadecimal and signed decimal number from given binary number
-        public (string, string, string) CalculateFromDec(string value, int Bit)
+        public enum BaseType
         {
-            Int64 decValue64 = Int64.Parse(value);
-
-
-            if (Bit == 32)
-            {
-                binary = Convert.ToString(decValue64 & 0xffffffff, 2);
-                hex = Convert.ToString(decValue64 & 0xffffffff, 16);
-                signedDec = Convert.ToString(decValue64 & 0xffffffff) ;
-
-            }
-            else if (Bit == 64)
-            {
-                binary = Convert.ToString(decValue64, 2);
-                hex = Convert.ToString(decValue64, 16);
-                signedDec = value;
-            }
-
-            return (binary, hex, signedDec);
+            Decimal = 10,
+            Binary = 2,
+            Hex = 16,
+            SignedDecimal = 10
         }
 
-        //Calculate the decimal, signed decimal and hexadecimal number from given binary number
-        //TODO signed Dec
-        public (string, string, string) CalculateFromBin(string value, int Bit)
+        public enum Bitness
         {
-            Int64 decValue64 = Convert.ToInt64(value, 2);
-
-            if (Bit == 32)
-            {
-                
-                dec = Convert.ToString(decValue64 & 0xffffffff);
-                hex = Convert.ToString(decValue64 & 0xffffffff, 16);
-
-                //signedDec = (value[31] == '1') ? calculateSignedDecimal(decValue64, Bit) : dec;
-
-            }
-            else if (Bit == 64)
-            {
-
-                dec = Convert.ToString(decValue64);
-                hex = Convert.ToString(decValue64 & 0xffffffff, 16);
-            }
-
-            return (dec, hex, signedDec);
+            Bit64 = 64,
+            Bit32 = 32
         }
 
-        //Calculate the decimal, hexadecimal and signed decimal number from given hexadecimal number
-        public (string, string, string) CalculateFromHex(string value, int Bit)
+        //Calculate Values 
+        public List<string> CalculateFromBase(string value, Bitness bit, BaseType baseType)
         {
+            if (string.IsNullOrEmpty(value))
+            {
+                value = "0";
+            }
+
+            //replace spaces from formatting
+            value = value.Replace(" ", "");
+            Int64 decValue64;
+            UInt64 unsignedDecValue64;
+
+            if (!Int64.TryParse(value, out decValue64)) throw new Exception("Error while parsing String to Int64");
+
+            value = Convert.ToString(decValue64, (int) BaseType.Binary);
+            unsignedDecValue64 = Convert.ToUInt64(value, (int) BaseType.Binary);
             
 
-            Int64 decValue64 = Convert.ToInt64(value, 16);
-
-
-            if (Bit == 32)
+            switch (bit)
             {
-                binary = Convert.ToString(decValue64 & 0xffffffff, 2);
-                dec = Convert.ToString(decValue64 & 0xffffffff);
-                signedDec = dec;
+                case Bitness.Bit32:
+                    dec = Convert.ToString(unsignedDecValue64 & 0xffffffff);
+                    signedDec = Convert.ToString(decValue64 & 0xffffffff);
+                    hex = Convert.ToString(decValue64 & 0xffffffff, 16);
+                    binary = Convert.ToString(decValue64 & 0xffffffff, 2);
+                    break;
+                case Bitness.Bit64:
+                    dec = Convert.ToString(unsignedDecValue64);
+                    signedDec = Convert.ToString(decValue64);
+                    hex = Convert.ToString(decValue64, 16);
+                    binary = Convert.ToString(decValue64, 2);
+                    break;
             }
-            else if (Bit == 64)
-            {
-                dec = Convert.ToString(decValue64);
-                binary = Convert.ToString(decValue64, 2);
-                signedDec = dec;
-            }
-
-            return (dec, signedDec, binary);
+            return new List<string>() { dec, signedDec, hex, binary };
         }
-
-
-        //Calculate the binary, hexadecimal and decimal number from given signed decimal number
-        public (string, string, string) CalculateFromSignedDec(string value, int Bit)
+   
+        //Update all Values from selected Checkboxes
+        public List<string> CalculateFromCheckBoxes(IList<object> items, List<string> allStatusbits, Bitness bit)
         {
+            IEnumerator item = items.GetEnumerator();
 
-            Int64 decValue64 = Int64.Parse(value);
+            Int64 decimalNumber = 0;
+            int index;
+            string currentItem;
 
-
-            if (Bit == 32)
+            for (int i = 0; i < items.Count; i++)
             {
-                binary = Convert.ToString(decValue64 & 0xffffffff, 2);
-                hex = Convert.ToString(decValue64 & 0xffffffff, 16);
-                dec = Convert.ToString(decValue64 & 0xffffffff);
-            }
-            else if (Bit == 64)
-            {
-                binary = Convert.ToString(decValue64, 2);
-                hex = Convert.ToString(decValue64, 16);
-                dec = value;
+                item.MoveNext();
+                currentItem = item.Current.ToString();
+                index = (int) bit - 1 - allStatusbits.IndexOf(currentItem);
+                decimalNumber += (Int64) Math.Pow(2, index);
             }
 
-            return (binary, hex, dec);
+            List<string> values = new List<string>();
+            values = CalculateFromBase(decimalNumber.ToString(), bit, BaseType.Decimal);
+            return FormatString(values);
         }
-        //private string calculateSignedDecimal(Int64 value, int Bit)
-        //{
+
+        public IList<object> CalculateActiveCheckboxes(List<string> allStatusBits, IList<object> items, string number, Bitness bit, BaseType baseType)
+        {
+            for (int i = items.Count - 1; i >= 0; i--)
+            {
+                items.RemoveAt(i);
+            }
+
+            if (string.IsNullOrEmpty(number))
+            {
+                number = "0";
+            }
+
+            //replace spaces from formatting
+            number = number.Replace(" ", "");
+
+            Int64 decValue64;
+            UInt64 unsignedDecValue64;
+
+            if (!Int64.TryParse(number, out decValue64)) throw new Exception("Error while parsing String to Int64");
+
+            number = Convert.ToString(decValue64, (int) BaseType.Binary);
+            unsignedDecValue64 = Convert.ToUInt64(number, (int) BaseType.Binary);
+           
+
+            int index = 0;
+
+            while (unsignedDecValue64 > 0)
+            {
+                if (unsignedDecValue64 % 2 == 1)
+                {
+                    items.Add(allStatusBits[(int) bit - 1 - index]);
+                }
+
+                index++;
+                unsignedDecValue64 /= 2;
+            }
+            return items;
+        }
+        public int CalculateCOT(List<string> allStatusBits, IList<object> items)
+        {
+            List<string> cot = new List<string>();
+            allStatusBits.Reverse();
+            cot = allStatusBits.GetRange(32, 6);
+            allStatusBits.Reverse();
+            int value = 0;
             
-        //    if (Bit == 32)
-        //    {
-        //        value -= (int) Math.Pow(2, 32);
-        //    } else if (Bit == 64)
-        //    {
-        //        value -= (int) Math.Pow(2, 64);
+            for (int i = 0; i < cot.Count; i++)
+            {
+                if (items.Contains(cot[i]))
+                {
+                    value += (int) Math.Pow(2, i);
+                }
+            }
 
-        //    }
+            return value;
+        }
 
-        //    return Convert.ToString(value);
-        //}
-    }
+        private List<string> FormatString(List<string> values)
+        {
+            int spacesBinary = 0;
+            int spacesDecimal = 0;
+            int spacesHexadecimal = 0;
+
+            for (int i = 1; i < values[3].Length; i++)
+            {
+                //binary => space every 4 digits: 0000 0000 0000
+                if (i % 4 == 0 && i < binary.Length)
+                {
+                    values[3] = values[3].Insert(values[3].Length - (i + spacesBinary), " ");
+                    spacesBinary += 1;
+                }
+                 //decimal => space every 3 digits: 100 000 000
+                if (i % 3 == 0 && i < dec.Length)
+                {
+                    values[0] = values[0].Insert(values[0].Length - (i + spacesDecimal), " ");
+                    spacesDecimal++;
+                }
+                //hex => space every 2 digits: FF FF FF
+                if (i % 2 == 0 && i < hex.Length)
+                {
+                    values[2] = values[2].Insert(values[2].Length - (i + spacesHexadecimal), " ");
+                    spacesHexadecimal++;
+                }
+            }
+
+            return values;
+      }
+   }
 }

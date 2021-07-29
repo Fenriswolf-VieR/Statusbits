@@ -9,81 +9,136 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+    
+        <MenuBar VerticalAlignment="Top">
+            <MenuBarItem Title="Language">
+                <MenuFlyoutItem Name="en" Text="English"/>
+            </MenuBarItem>
+            <MenuBarItem Title="Version">
+                <MenuFlyoutItem Name="v1000" Text="1000"/>
+            </MenuBarItem>
+        </MenuBar>
 
-        <StackPanel Orientation="Horizontal">
-            <ComboBox x:Name="Test" 
-                      Header="Scan from Clipboard:"
-                      Margin="10,10,0,0"
+        <StackPanel Margin="15,50,20,650">
+            <ComboBox Header="Scan from Clipboard:"
                       Width="200"
-                      ItemsSource="{x:Bind Path=clipBoardOptions}" 
+                      Height="56"
+                      ItemsSource="{Binding Model.ClipboardOptions}" 
                       SelectedIndex="0" 
                       SelectionChanged="TypeComboBox_OnSelectionChanged"/>
-
+            <RadioButton x:Name="Bit64" Content="64 Bit" Margin="240,-33,0,0" VerticalAlignment="Top" Height="30" Width="60" Checked="Bit64_OnChecked" IsChecked="True" MinWidth="70"/>
+            <RadioButton x:Name="Bit32" Content="32 Bit" Margin="320,-33,0,0" VerticalAlignment="Top" Height="30" Width="50" Checked="Bit32_OnChecked" MinWidth="70"/>
+            <TextBox Text="{Binding Model.Version}" 
+                     BorderThickness="0"
+                     TextWrapping="Wrap" 
+                     HorizontalContentAlignment="Center" 
+                     Margin="800,-32,0,0" 
+                     IsReadOnly="True" 
+                     Width="170"
+                     HorizontalAlignment="Left" 
+                     Height="32">
+                <TextBox.Header>
+                    <TextBlock  Text="Version:" HorizontalAlignment="Left"></TextBlock>
+                </TextBox.Header>
+            </TextBox>
         </StackPanel>
 
-        <RadioButton x:Name="Bit32" Content="32 Bit" Margin="320,33,0,0" VerticalAlignment="Top" Height="30" Width="50" IsChecked="False" MinWidth="70"/>
-        <RadioButton x:Name="Bit64" Content="64 Bit" Margin="230,33,0,0" VerticalAlignment="Top" Height="30" Width="60" IsChecked="True" MinWidth="70"/>
+        <StackPanel Margin="20,635,20,20">
+            <TextBox Text="{Binding Model.Values[0]}" 
+                     Name="DecimalTB"
+                     KeyDown="DecimalTB_OnKeyDown"
+                     TextWrapping="Wrap" 
+                     Width="215"
+                     Margin="0,0,0,0" 
+                     Header="Decimal:" 
+                     HorizontalAlignment="Left" 
+                     VerticalAlignment="Top"
+                     Height="56"
+                     LostFocus="DecimalTB_OnLostFocus"/>
+            <TextBox Text="{Binding Model.Values[1]}" 
+                     Name="SignedDecimalTB"
+                     KeyDown="SignedDecimalTB_OnKeyDown"
+                     TextWrapping="Wrap" 
+                     Width="175" 
+                     Header="Signed Decimal:" 
+                     HorizontalContentAlignment="Center" 
+                     Margin="180,-56,0,0" 
+                     HorizontalAlignment="Left" 
+                     VerticalAlignment="Top" 
+                     UseLayoutRounding="False" 
+                     Height="56"
+                     Visibility="Collapsed"
+                     LostFocus="SignedDecimalTB_OnLostFocus"/>
+            <TextBox Text="{Binding Model.Values[2]}"
+                     Name="HexadecimalTB"
+                     KeyDown="HexadecimalTB_OnKeyDown"
+                     TextWrapping="Wrap" 
+                     Width="175" 
+                     Header="Hexadecimal:"
+                     HorizontalContentAlignment="Center"
+                     Margin="220,-56,0,0"  
+                     HorizontalAlignment="Left" 
+                     VerticalAlignment="Top" 
+                     UseLayoutRounding="False" 
+                     Height="56"
+                     LostFocus="HexadecimalTB_OnLostFocus"/>
+            <TextBox Text="{Binding Model.Values[3]}" 
+                     Name="BinaryTB"
+                     KeyDown="BinaryTB_OnKeyDown"
+                     TextWrapping="Wrap" 
+                     Header="Binary:" 
+                     Width="583"
+                     HorizontalContentAlignment="Center"
+                     Margin="400,-56,0,0" 
+                     UseLayoutRounding="False" 
+                     HorizontalAlignment="Left" 
+                     Height="56"
+                     LostFocus="BinaryTB_OnLostFocus"/>
+            <TextBox Text="{Binding Model.CotValue}" 
+                     Name="CotValue"
+                     TextWrapping="Wrap" 
+                     Width="200" 
+                     Header="Cause of transmission:" 
+                     HorizontalContentAlignment="Center" 
+                     Margin="0,0,0,0" 
+                     IsReadOnly="True" 
+                     HorizontalAlignment="Left" 
+                     VerticalAlignment="Top" 
+                     Height="56"/>
+            <TextBox Text="{Binding Model.CotMessage}" 
+                     Name="CotMessage"
+                     TextWrapping="Wrap" 
+                     HorizontalContentAlignment="Center" 
+                     Margin="205,-32,0,0" 
+                     IsReadOnly="True" 
+                     Width="778"
+                     HorizontalAlignment="Left" 
+                     Height="32"/>
+        </StackPanel>
 
-        <StackPanel>
-            <ListView Margin="10,100,0,0" 
-                      Name="StatusBitsList"
-                      Width="1004"
-                      Height="500" 
-                      ItemsSource="{x:Bind Path=statusBits}" 
-                      SelectionMode="Multiple" 
-                      HorizontalAlignment="Left">
-                <CheckBox x:Name="checkBox"/>
+        <StackPanel Margin="20,120,20,135">
+
+            <ListView Height="515"
+                      Width="984"
+                      Name="ActiveBits"
+                      HorizontalAlignment="Left"
+                      SelectionMode="Multiple"
+                      SelectionChanged="ActiveBits_OnSelectionChanged"
+                      ItemsSource="{Binding Model.StatusBits}">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="MinWidth" Value="250"></Setter>
+                        <Setter Property="MinHeight" Value="31"></Setter>
+                        <Setter Property="MaxHeight" Value="31"></Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
             </ListView>
+            <CheckBox Name="test" MinWidth="500"></CheckBox>
         </StackPanel>
-
-        <StackPanel>
-
-
-        </StackPanel>
-
-        <TextBox Text="{x:Bind Path=Decimal}" 
-                 Name="DecimalTB"
-                 KeyDown="DecimalTB_OnKeyDown"
-                 TextWrapping="Wrap" 
-                 Width="200"
-                 Margin="10,620,0,0" 
-                 Header="Decimal:" 
-                 HorizontalAlignment="Left" 
-                 VerticalAlignment="Top"
-                 Height="55.2"/>
-        <TextBox Text="{x:Bind Path=SignedDecimal}" 
-                 Name="SignedDecimalTB"
-                 KeyDown="SignedDecimalTB_OnKeyDown"
-                 TextWrapping="Wrap" 
-                 Width="200" 
-                 Header="Signed Decimal:" 
-                 HorizontalContentAlignment="Center" 
-                 Margin="216,620,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Height="55.2">
-        </TextBox>
-        <TextBox Text="{x:Bind Path=Hexadecimal}"
-                 Name="HexadecimalTB"
-                 KeyDown="HexadecimalTB_OnKeyDown"
-                 TextWrapping="Wrap" 
-                 Width="200" 
-                 Header="Hexadecimal:"
-                 HorizontalContentAlignment="Center"
-                 Margin="421,620,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" UseLayoutRounding="False" Height="55.2"/>
-        <TextBox Text="{x:Bind Path=Binary}" 
-                 Name="BinaryTB"
-                 KeyDown="BinaryTB_OnKeyDown"
-                 TextWrapping="Wrap" 
-                 Header="Binary:" 
-                 HorizontalContentAlignment="Center"
-                 Margin="625,620,7,89" UseLayoutRounding="False" Height="55.2" Width="390"/>
-        <TextBox Text="" 
-                 TextWrapping="Wrap" 
-                 Width="200" 
-                 Header="Cause of transmission:" 
-                 HorizontalContentAlignment="Center" 
-                 Margin="10,690,811,15" IsReadOnly="True" Height="59.2"/>
-        <TextBox Text="" 
-                 TextWrapping="Wrap" 
-                 HorizontalContentAlignment="Center" 
-                 Margin="215,713,7,15" IsReadOnly="True" Width="800" Height="36"/>
     </Grid>
 </Page>
