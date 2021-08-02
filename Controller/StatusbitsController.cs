@@ -1,8 +1,8 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Statusbits.Model;
-using BitDecryption;
 using Windows.ApplicationModel.Resources;
 //using WK.Libraries.SharpClipboardNS;
 
@@ -15,21 +15,21 @@ namespace Statusbits.Controller
     private BitDecryption.BitDecryption CalculateBits;
 
     private Dictionary<string, BitDecryption.BitDecryption.BaseType> baseTypeHelper;
-    public StatusbitsController(int bits)
+    public StatusbitsController(int bits, string test="1000")
     {
       CalculateBits = new BitDecryption.BitDecryption();
       Model = new StatusbitsModel();
 
       //Add Clipboard options
       Model.ClipboardOptions.Add("no");
-      Model.ClipboardOptions.Add("hexadecimal");
-      Model.ClipboardOptions.Add("decimal");
-      Model.ClipboardOptions.Add("binary");
-      Model.ClipboardOptions.Add("signed decimal");
+      Model.ClipboardOptions.Add("Hexadecimal");
+      Model.ClipboardOptions.Add("Decimal");
+      Model.ClipboardOptions.Add("Binary");
+      //Model.ClipboardOptions.Add("signed decimal");
 
       Model.Bit = bits;
-      Model.Version = "1000";
-
+      //Model.Version = "1000";
+      Model.Version = test;
       //set default value for decimal, signedDecimal, Hexadecimal, binary
       Model.Values.Add("0");
       Model.Values.Add("0");
@@ -37,12 +37,7 @@ namespace Statusbits.Controller
       Model.Values.Add("0");
 
       //Load bits from Version
-      resource = new ResourceLoader(Model.Version);
-      for (var i = 0; i < Model.Bit; i++)
-      {
-        Model.StatusBits.Add(i.ToString() + " " + resource.GetString(i.ToString()));
-      }
-      Model.StatusBits.Reverse();
+      UpdateStatusbitsFromVersion(test);
 
       //Load COT Messages
       resource = new ResourceLoader("COT");
@@ -57,8 +52,8 @@ namespace Statusbits.Controller
       baseTypeHelper = new Dictionary<string, BitDecryption.BitDecryption.BaseType>();
 
       baseTypeHelper.Add("Decimal", BitDecryption.BitDecryption.BaseType.Decimal);
-      baseTypeHelper.Add("SignedDecimal", BitDecryption.BitDecryption.BaseType.SignedDecimal);
-      baseTypeHelper.Add("Hex", BitDecryption.BitDecryption.BaseType.Hex);
+      //baseTypeHelper.Add("SignedDecimal", BitDecryption.BitDecryption.BaseType.SignedDecimal);
+      baseTypeHelper.Add("Hexadecimal", BitDecryption.BitDecryption.BaseType.Hex);
       baseTypeHelper.Add("Binary", BitDecryption.BitDecryption.BaseType.Binary);
     }
 
@@ -108,6 +103,44 @@ namespace Statusbits.Controller
           Model.CotValue = CalculateBits.CalculateCOT(Model.StatusBits, items);
           Model.CotMessage = Model.CotMessages[Model.CotValue];
         }
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine(e);
+        throw;
+      }
+    }
+
+    public void UpdateStatusbitsFromVersion(string version)
+    {
+      try
+      {
+        Model.Version = version;
+        resource = new ResourceLoader(Model.Version);
+
+        List<string> newStatusbits = new List<string>();
+
+        for (var i = 0; i < Model.Bit; i++)
+        {
+          newStatusbits.Add(i.ToString() + " " + resource.GetString(i.ToString()));
+        }
+        newStatusbits.Reverse();
+
+        Model.StatusBits = newStatusbits;
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine(e);
+        throw;
+      }
+    }
+
+    public void UpdateBits(int bits)
+    {
+      try
+      {
+        Model.Bit = bits;
+        UpdateStatusbitsFromVersion(Model.Version);
       }
       catch (Exception e)
       {

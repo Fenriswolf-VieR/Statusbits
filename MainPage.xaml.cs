@@ -1,49 +1,50 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using Windows.System;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml;
 using Statusbits.Controller;
-using WK.Libraries.SharpClipboardNS;
-
-
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+using Windows.ApplicationModel.DataTransfer;
 
 namespace Statusbits
 {
-  /// <summary>
-  /// An empty page that can be used on its own or navigated to within a Frame.
-  /// </summary>
   public sealed partial class MainPage : Page
   {
     private StatusbitsController controller;
 
-    //private SharpClipboard clipBoard;
-
     public MainPage()
     {
 
-      this.InitializeComponent();
 
       controller = new StatusbitsController(64);
 
       this.DataContext = controller;
 
-      //clipBoard = new SharpClipboard();
-      //clipBoard.ObservableFormats.Texts = true;
-      //clipBoard.ClipboardChanged += ClipboardChanged;
+      this.InitializeComponent();
+
     }
 
-    //private void ClipboardChanged(Object sender, SharpClipboard.ClipboardChangedEventArgs e)
-    //{
-    //  if (e.ContentType == SharpClipboard.ContentTypes.Text)
-    //  {
-    //    DecimalTB.Text = clipBoard.ClipboardText;
-    //  }
-    //}
-
-    private void TypeComboBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+    private async void Clipboard_ContentChanged(object sender, object e)
     {
+      var dataPackageView = Clipboard.GetContent();
+      if (dataPackageView.Contains(StandardDataFormats.Text))
+      {
+        var value = await dataPackageView.GetTextAsync();
+
+        controller.UpdateValues(value, ClipboardType.SelectionBoxItem.ToString(), ActiveBits.SelectedItems);
+      }
+    }
+
+
+    private void ClipboardType_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+      Clipboard.ContentChanged -= Clipboard_ContentChanged;
+      if (ClipboardType.SelectedItem.ToString() != "no")
+      {
+        Clipboard.ContentChanged += Clipboard_ContentChanged;
+      }
     }
 
     private void DecimalTB_OnKeyDown(object sender, KeyRoutedEventArgs e)
@@ -66,7 +67,7 @@ namespace Statusbits
     {
       if (e.Key == VirtualKey.Enter)
       {
-        controller.UpdateValues(HexadecimalTB.Text, "Hex", ActiveBits.SelectedItems);
+        controller.UpdateValues(HexadecimalTB.Text, "Hexadecimal", ActiveBits.SelectedItems);
       }
     }
 
@@ -85,15 +86,11 @@ namespace Statusbits
 
     private void Bit64_OnChecked(object sender, RoutedEventArgs e)
     {
-      controller = new StatusbitsController(64);
-
-      this.DataContext = controller;
+      controller.UpdateBits(64);
     }
     private void Bit32_OnChecked(object sender, RoutedEventArgs e)
     {
-      controller = new StatusbitsController(32);
-
-      this.DataContext = controller;
+      controller.UpdateBits(32);
     }
 
     private void DecimalTB_OnLostFocus(object sender, RoutedEventArgs e)
@@ -108,7 +105,7 @@ namespace Statusbits
 
     private void HexadecimalTB_OnLostFocus(object sender, RoutedEventArgs e)
     {
-      controller.UpdateValues(HexadecimalTB.Text, "Hex", ActiveBits.SelectedItems);
+      controller.UpdateValues(HexadecimalTB.Text, "Hexadecimal", ActiveBits.SelectedItems);
     }
 
     private void BinaryTB_OnLostFocus(object sender, RoutedEventArgs e)
@@ -116,6 +113,31 @@ namespace Statusbits
       controller.UpdateValues(BinaryTB.Text, "Binary", ActiveBits.SelectedItems);
     }
 
+    private void V1000_OnClick(object sender, RoutedEventArgs e)
+    {
+      controller.UpdateStatusbitsFromVersion("1000");
+    }
+    private void V820_OnClick(object sender, RoutedEventArgs e)
+    {
+      controller.UpdateStatusbitsFromVersion("820");
+    }
 
+    private void V810_OnClick(object sender, RoutedEventArgs e)
+    {
+      controller.UpdateStatusbitsFromVersion("810");
+    }
+
+    private void V800_OnClick(object sender, RoutedEventArgs e)
+    {
+      controller.UpdateStatusbitsFromVersion("800");
+    }
+    private void V760_OnClick(object sender, RoutedEventArgs e)
+    {
+      controller.UpdateStatusbitsFromVersion("760");
+    }
+    private void V750_OnClick(object sender, RoutedEventArgs e)
+    {
+      controller.UpdateStatusbitsFromVersion("750");
+    }
   }
 }

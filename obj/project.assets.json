@@ -307,15 +307,6 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "SharpClipboard/3.5.2": {
-        "type": "package",
-        "compile": {
-          "lib/net20/SharpClipboard.dll": {}
-        },
-        "runtime": {
-          "lib/net20/SharpClipboard.dll": {}
-        }
-      },
       "BitDecryption/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -810,15 +801,6 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
-        }
-      },
-      "SharpClipboard/3.5.2": {
-        "type": "package",
-        "compile": {
-          "lib/net20/SharpClipboard.dll": {}
-        },
-        "runtime": {
-          "lib/net20/SharpClipboard.dll": {}
         }
       },
       "BitDecryption/1.0.0": {
@@ -1318,15 +1300,6 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "SharpClipboard/3.5.2": {
-        "type": "package",
-        "compile": {
-          "lib/net20/SharpClipboard.dll": {}
-        },
-        "runtime": {
-          "lib/net20/SharpClipboard.dll": {}
-        }
-      },
       "BitDecryption/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1824,15 +1797,6 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "SharpClipboard/3.5.2": {
-        "type": "package",
-        "compile": {
-          "lib/net20/SharpClipboard.dll": {}
-        },
-        "runtime": {
-          "lib/net20/SharpClipboard.dll": {}
-        }
-      },
       "BitDecryption/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -2327,15 +2291,6 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
-        }
-      },
-      "SharpClipboard/3.5.2": {
-        "type": "package",
-        "compile": {
-          "lib/net20/SharpClipboard.dll": {}
-        },
-        "runtime": {
-          "lib/net20/SharpClipboard.dll": {}
         }
       },
       "BitDecryption/1.0.0": {
@@ -2835,15 +2790,6 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "SharpClipboard/3.5.2": {
-        "type": "package",
-        "compile": {
-          "lib/net20/SharpClipboard.dll": {}
-        },
-        "runtime": {
-          "lib/net20/SharpClipboard.dll": {}
-        }
-      },
       "BitDecryption/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -3338,15 +3284,6 @@
         },
         "native": {
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
-        }
-      },
-      "SharpClipboard/3.5.2": {
-        "type": "package",
-        "compile": {
-          "lib/net20/SharpClipboard.dll": {}
-        },
-        "runtime": {
-          "lib/net20/SharpClipboard.dll": {}
         }
       },
       "BitDecryption/1.0.0": {
@@ -3844,15 +3781,6 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
-        }
-      },
-      "SharpClipboard/3.5.2": {
-        "type": "package",
-        "compile": {
-          "lib/net20/SharpClipboard.dll": {}
-        },
-        "runtime": {
-          "lib/net20/SharpClipboard.dll": {}
         }
       },
       "BitDecryption/1.0.0": {
@@ -8303,22 +8231,6 @@
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
-    "SharpClipboard/3.5.2": {
-      "sha512": "FdH8/Rd+xDLwnj7CgeQAZb/EuPGzSXNxfE1SOr2I1XbWB6pANhYvTsc70GYelXWZHBGlct2p+PJK/AETTbkHjQ==",
-      "type": "package",
-      "path": "sharpclipboard/3.5.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "clipboard.png",
-        "lib/net20/SharpClipboard.dll",
-        "lib/net20/SharpClipboard.xml",
-        "lib/netcoreapp3.0/SharpClipboard.dll",
-        "lib/netcoreapp3.0/SharpClipboard.xml",
-        "sharpclipboard.3.5.2.nupkg.sha512",
-        "sharpclipboard.nuspec"
-      ]
-    },
     "BitDecryption/1.0.0": {
       "type": "project",
       "path": "BitDecryption/BitDecryption.csproj",
@@ -8328,8 +8240,7 @@
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.17763": [
       "BitDecryption >= 1.0.0",
-      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.12",
-      "SharpClipboard >= 3.5.2"
+      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.12"
     ]
   },
   "packageFolders": {
@@ -8379,10 +8290,6 @@
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.2.12, )"
-          },
-          "SharpClipboard": {
-            "target": "Package",
-            "version": "[3.5.2, )"
           }
         },
         "imports": [
@@ -8415,17 +8322,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'SharpClipboard 3.5.2' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework 'UAP,Version=v10.0.17763'. This package may not be fully compatible with your project.",
-      "libraryId": "SharpClipboard",
-      "targetGraphs": [
-        "UAP,Version=v10.0.17763"
-      ]
-    }
-  ]
+  }
 }

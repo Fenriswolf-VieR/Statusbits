@@ -156,9 +156,6 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.12</Version>
     </PackageReference>
-    <PackageReference Include="SharpClipboard">
-      <Version>3.5.2</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="BitDecryption\BitDecryption.csproj">
@@ -180,6 +177,21 @@
   </ItemGroup>
   <ItemGroup>
     <PRIResource Include="COT.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="version\820.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="version\810.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="version\800.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="version\750.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="version\760.resw" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

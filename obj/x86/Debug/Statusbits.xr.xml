@@ -76,6 +76,7 @@
       <RootEvent Name="LostFocus" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="Name" />
       <RootProperty Name="Header" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
@@ -104,6 +105,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyoutItem">
       <RootProperty Name="Name" />
       <RootProperty Name="Text" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Statusbits.MainPage" />
   </Roots.RootTypes>
