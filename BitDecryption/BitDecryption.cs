@@ -34,7 +34,6 @@ namespace BitDecryption
         value = "0";
       }
 
-      //replace spaces from formatting
       value = value.Replace(" ", "");
       UInt64 unsignedDecValue64;
 
