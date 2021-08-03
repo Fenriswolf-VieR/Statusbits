@@ -14,9 +14,6 @@ Das ursprüngliche Programm wurde in "Lua" geschrieben. Um ein besser wartbares 
 
 <img src="./Assets/ReadMe_overview.PNG"/>
 
-<br/>
-<br/>
-
 
 ## __Funktion__
 
