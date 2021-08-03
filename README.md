@@ -70,6 +70,6 @@ Update: UWP-Apps lassen sich nicht als .exe starten. Sie werden als App im Start
 Ein weiteres Problem stellt das Clipboard dar. Wenn die App im Hintergrund ausgeführt und die Zwischenablage aktualisiert wird stürzt die App ab. Das Programm muss im Vordergrund laufen.
 
 
-Links: 
+Weiterführende Links: 
 + <https://stackoverflow.com/questions/51714328/visual-studio-uwp-not-launching-when-clicking-the-executable-from-the-bin-direct>
 + <https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide#secure> 
