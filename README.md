@@ -64,7 +64,7 @@ Diese Klasse funktioniert wie eine "View-Klasse" in einem MVP System. Die Klasse
 ## __Problem__
 
 Nach dem Kompilieren lässt sich die "Statusbits.exe"-Datei nicht öffnen. Das liegt vermutlich an Windows, weil ein leeres Projekt auch nicht startet. #TODO->Google
-
+Update: UWP-Apps lassen sich nicht als .exe starten. Sie werden als App im Startmenü hinzugefügt und ist dann auch startbar.
 
 Links: 
 + <https://stackoverflow.com/questions/51714328/visual-studio-uwp-not-launching-when-clicking-the-executable-from-the-bin-direct>
