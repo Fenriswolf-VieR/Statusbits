@@ -67,5 +67,5 @@ Nach dem Kompilieren lässt sich die "Statusbits.exe"-Datei nicht öffnen. Das l
 
 
 Links: 
-<https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide#secure> 
-<https://stackoverflow.com/questions/51714328/visual-studio-uwp-not-launching-when-clicking-the-executable-from-the-bin-direct>
++ <https://stackoverflow.com/questions/51714328/visual-studio-uwp-not-launching-when-clicking-the-executable-from-the-bin-direct>
++ <https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide#secure> 
