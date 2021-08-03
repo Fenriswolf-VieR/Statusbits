@@ -4,18 +4,20 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Statusbits.Model;
 using Windows.ApplicationModel.Resources;
+
 //using WK.Libraries.SharpClipboardNS;
 
 namespace Statusbits.Controller
 {
   class StatusbitsController
   {
+
     private ResourceLoader resource;
     public StatusbitsModel Model { get; set; }
     private BitDecryption.BitDecryption CalculateBits;
 
     private Dictionary<string, BitDecryption.BitDecryption.BaseType> baseTypeHelper;
-    public StatusbitsController(int bits, string test="1000")
+    public StatusbitsController(int bits, string version="1000")
     {
       CalculateBits = new BitDecryption.BitDecryption();
       Model = new StatusbitsModel();
@@ -28,8 +30,8 @@ namespace Statusbits.Controller
       //Model.ClipboardOptions.Add("signed decimal");
 
       Model.Bit = bits;
-      //Model.Version = "1000";
-      Model.Version = test;
+      Model.Version = version;
+
       //set default value for decimal, signedDecimal, Hexadecimal, binary
       Model.Values.Add("0");
       Model.Values.Add("0");
@@ -37,7 +39,7 @@ namespace Statusbits.Controller
       Model.Values.Add("0");
 
       //Load bits from Version
-      UpdateStatusbitsFromVersion(test);
+      UpdateStatusbitsFromVersion(Model.Version);
 
       //Load COT Messages
       resource = new ResourceLoader("COT");
@@ -60,6 +62,7 @@ namespace Statusbits.Controller
     //Calculate values from input and set checkboxes
     public void UpdateValues(string value, string baseForm, IList<object> items)
     {
+      Model.ErrorMsg = "";
       try
       {
         var Bit = BitDecryption.BitDecryption.Bitness.Bit64;
@@ -80,7 +83,7 @@ namespace Statusbits.Controller
       catch (Exception e)
       {
         Console.WriteLine(e);
-        throw;
+        Model.ErrorMsg = e.ToString();
       }
     }
 
@@ -131,7 +134,7 @@ namespace Statusbits.Controller
       catch (Exception e)
       {
         Console.WriteLine(e);
-        throw;
+        Model.ErrorMsg = e.ToString();
       }
     }
 

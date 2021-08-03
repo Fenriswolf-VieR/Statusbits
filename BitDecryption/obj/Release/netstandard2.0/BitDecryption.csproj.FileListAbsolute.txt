@@ -1,0 +1,9 @@
+C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\bin\Release\netstandard2.0\BitDecryption.cs
+C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\bin\Release\netstandard2.0\BitDecryption.deps.json
+C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\bin\Release\netstandard2.0\BitDecryption.dll
+C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\bin\Release\netstandard2.0\BitDecryption.pdb
+C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\obj\Release\netstandard2.0\BitDecryption.AssemblyInfoInputs.cache
+C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\obj\Release\netstandard2.0\BitDecryption.AssemblyInfo.cs
+C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\obj\Release\netstandard2.0\BitDecryption.csproj.CoreCompileInputs.cache
+C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\obj\Release\netstandard2.0\BitDecryption.dll
+C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\obj\Release\netstandard2.0\BitDecryption.pdb
