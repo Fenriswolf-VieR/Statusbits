@@ -28,6 +28,8 @@ Wenn "no" ausgewählt wurde wird keine Eingabe von der Zwischenablage übernomme
 
 Es können auch die Bits mit Klicks auf die Checkboxen ausgewählt werden. 
 Beim Eingeben einer Zahl in die Textboxen werden automatisch alle anderen berechnet.
+
+Bei einer falschen Eingabe (Wert ist zu groß, Ungültige Zeichen beim Zahlensystem) wird der Fehler in roter Schrift am unteren Rand angezeigt.
 <br/>
 
 ---
