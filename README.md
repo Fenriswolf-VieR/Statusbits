@@ -10,7 +10,10 @@
 
 ## __About the Project__
 
-<img src="./Assets/ReadMe_overview.PNG" width="500"/>
+Das ursprüngliche Programm wurde in "Lua" geschrieben. Um ein besser wartbares System zu haben wurde das Programm in "C#" übersetzt. Es dient dazu von einem Dezimal-, Hexadezimal- oder Binärwert die gesetzten Bits abzufragen und so den Status besser dargestellt zu bekommen.
+
+
+<img src="./Assets/ReadMe_overview.PNG"/>
 
 
 
@@ -24,7 +27,7 @@
 
 In dem "Scan From Clipboard" Auswahlfeld kann zwischen den Optionen "no", "hexadecimal", "decimal" und "binary" ausgewählt werden.
 
-Wenn "no" ausgewählt wurde wird keine Eingabe von der Zwischenablage genommen. Bei allen anderen Optionen wird immer wenn die Zwischenablage aktualisiert wird, diese mit dem ausgewählten Zahlensystem kopiert und es werden alle anderen Werte berechnet.
+Wenn "no" ausgewählt wurde wird keine Eingabe von der Zwischenablage übernommen. Bei allen anderen Optionen wird immer, wenn die Zwischenablage aktualisiert wird, diese mit dem ausgewählten Zahlensystem kopiert und es werden alle anderen Werte berechnet.
 
 Es können auch die Bits mit Klicks auf die Checkboxen ausgewählt werden. 
 Beim Eingeben einer Zahl in die Textboxen werden automatisch alle anderen berechnet.
@@ -45,7 +48,7 @@ __Klassen__
 
 *__StatusbitsController.cs__*
 
-Über den Controller werden alle Prozesse gemäß den Eingaben, die vom Benutzer getätigt wurden aufgerufen.
+Über den Controller werden alle Prozesse gemäß den Eingaben, die vom Benutzer getätigt und über die View weitergegeben wurden, aufgerufen.
 
 *__StatusbitsModel.cs__*
 
@@ -57,16 +60,13 @@ In der "StatusbitsModel.cs" Klasse werden alle Variablen gespeichert und bereitg
 
 *__MainPage.xaml.cs__*
 
-Diese Klasse funktioniert wie eine "View-Klasse" in einem MVP System. Die Klasse wird benutzt um die Eingaben des Benutzers an den Controller weiter zu leiten.
+Diese Klasse funktioniert wie eine "View-Klasse" in einem MVP System. Die Klasse wird benutzt um die Eingaben des Benutzers an den Controller weiterzuleiten.
 
 ---
 
 ## __Problem__
 
-Nach dem Kompilieren lässt sich die "Statusbits.exe"-Datei nicht öffnen. Das liegt vermutlich an Windows, weil ein leeres Projekt auch nicht startet. 
-
-
-Update: UWP-Apps lassen sich nicht als .exe starten. Sie werden als App im Startmenü hinzugefügt und sind darüber startbar.
+UWP-Apps lassen sich nicht als ".exe" starten. Sie werden als App im Startmenü hinzugefügt und sind darüber startbar.
 Ein weiteres Problem stellt das Clipboard dar. Wenn die App im Hintergrund ausgeführt und die Zwischenablage aktualisiert wird stürzt die App ab. Das Programm muss im Vordergrund laufen.
 
 
