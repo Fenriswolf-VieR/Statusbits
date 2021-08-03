@@ -5,50 +5,50 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignHeight="805">
 
-    <Grid>
-    
-        <MenuBar VerticalAlignment="Top">
-            <MenuBarItem Title="Language">
-                <MenuFlyoutItem Name="en" Text="English"/>
-            </MenuBarItem>
-            <MenuBarItem Title="Version">
-                <MenuFlyoutItem Name="v1000" Text="1000" Click="V1000_OnClick"/>
-                <MenuFlyoutItem Name="v820" Text="820" Click="V820_OnClick"/>
-                <MenuFlyoutItem Name="v810" Text="810" Click="V810_OnClick"/>
-                <MenuFlyoutItem Name="v800" Text="800" Click="V800_OnClick"/>
-                <MenuFlyoutItem Name="v760" Text="760" Click="V760_OnClick"/>
-                <MenuFlyoutItem Name="v750" Text="750" Click="V750_OnClick"/>
+  <Grid>
+
+    <MenuBar VerticalAlignment="Top">
+      <MenuBarItem Title="Language">
+        <MenuFlyoutItem Name="en" Text="English"/>
       </MenuBarItem>
-        </MenuBar>
+      <MenuBarItem Title="Version">
+        <MenuFlyoutItem Name="v1000" Text="1000" Click="V1000_OnClick"/>
+        <MenuFlyoutItem Name="v820" Text="820" Click="V820_OnClick"/>
+        <MenuFlyoutItem Name="v810" Text="810" Click="V810_OnClick"/>
+        <MenuFlyoutItem Name="v800" Text="800" Click="V800_OnClick"/>
+        <MenuFlyoutItem Name="v760" Text="760" Click="V760_OnClick"/>
+        <MenuFlyoutItem Name="v750" Text="750" Click="V750_OnClick"/>
+      </MenuBarItem>
+    </MenuBar>
 
-        <StackPanel Margin="15,50,20,650">
-            <ComboBox Header="Scan from Clipboard:"
+    <StackPanel Margin="15,50,20,650">
+      <ComboBox Header="Scan from Clipboard:"
                       Name="ClipboardType"
                       Width="200"
                       Height="56"
                       ItemsSource="{Binding Model.ClipboardOptions}" 
                       SelectedIndex="0" 
                       SelectionChanged="ClipboardType_OnSelectionChanged"/>
-            <RadioButton x:Name="Bit64" Content="64 Bit" Margin="240,-33,0,0" VerticalAlignment="Top" Height="30" Width="60" Checked="Bit64_OnChecked" IsChecked="True" MinWidth="70"/>
-            <RadioButton x:Name="Bit32" Content="32 Bit" Margin="320,-33,0,0" VerticalAlignment="Top" Height="30" Width="50" Checked="Bit32_OnChecked" MinWidth="70"/>
-            <TextBox Text="{Binding Model.Version}" 
-                     BorderThickness="0"
-                     TextWrapping="Wrap" 
-                     HorizontalContentAlignment="Center" 
-                     Margin="800,-32,0,0" 
-                     Width="170"
-                     HorizontalAlignment="Left" 
-                     Height="32">
-                <TextBox.Header>
-                    <TextBlock  Text="Version:" HorizontalAlignment="Left"></TextBlock>
-                </TextBox.Header>
-            </TextBox>
-        </StackPanel>
+      <RadioButton x:Name="Bit64" Content="64 Bit" Margin="240,-33,0,0" VerticalAlignment="Top" Height="30" Width="60" Checked="Bit64_OnChecked" IsChecked="True" MinWidth="70"/>
+      <RadioButton x:Name="Bit32" Content="32 Bit" Margin="320,-33,0,0" VerticalAlignment="Top" Height="30" Width="50" Checked="Bit32_OnChecked" MinWidth="70"/>
+      <TextBox Text="Version:" 
+               Width="70"
+               BorderThickness="0"
+               IsReadOnly="True"
+               Margin="600,-32,0,0"></TextBox>
+      <TextBox Text="{Binding Model.Version}" 
+                      BorderThickness="0"
+                      IsReadOnly="True"
+                      Margin="817,-32,0,0" 
+                     Width="200"
+                      Height="32">
+      </TextBox>
+    </StackPanel>
 
-        <StackPanel Margin="20,635,20,20">
-            <TextBox Text="{Binding Model.Values[0]}" 
+    <StackPanel Margin="20,635,20,20">
+      <TextBox Text="{Binding Model.Values[0]}" 
                      Name="DecimalTB"
                      KeyDown="DecimalTB_OnKeyDown"
                      TextWrapping="Wrap" 
@@ -59,7 +59,7 @@
                      VerticalAlignment="Top"
                      Height="56"
                      LostFocus="DecimalTB_OnLostFocus"/>
-            <TextBox Text="{Binding Model.Values[1]}" 
+      <TextBox Text="{Binding Model.Values[1]}" 
                      Name="SignedDecimalTB"
                      KeyDown="SignedDecimalTB_OnKeyDown"
                      TextWrapping="Wrap" 
@@ -73,7 +73,7 @@
                      Height="56"
                      Visibility="Collapsed"
                      LostFocus="SignedDecimalTB_OnLostFocus"/>
-            <TextBox Text="{Binding Model.Values[2]}"
+      <TextBox Text="{Binding Model.Values[2]}"
                      Name="HexadecimalTB"
                      KeyDown="HexadecimalTB_OnKeyDown"
                      TextWrapping="Wrap" 
@@ -86,7 +86,7 @@
                      UseLayoutRounding="False" 
                      Height="56"
                      LostFocus="HexadecimalTB_OnLostFocus"/>
-            <TextBox Text="{Binding Model.Values[3]}" 
+      <TextBox Text="{Binding Model.Values[3]}" 
                      Name="BinaryTB"
                      KeyDown="BinaryTB_OnKeyDown"
                      TextWrapping="Wrap" 
@@ -98,7 +98,7 @@
                      HorizontalAlignment="Left" 
                      Height="56"
                      LostFocus="BinaryTB_OnLostFocus"/>
-            <TextBox Text="{Binding Model.CotValue}" 
+      <TextBox Text="{Binding Model.CotValue}" 
                      Name="CotValue"
                      TextWrapping="Wrap" 
                      Width="200" 
@@ -109,7 +109,7 @@
                      HorizontalAlignment="Left" 
                      VerticalAlignment="Top" 
                      Height="56"/>
-            <TextBox Text="{Binding Model.CotMessage}" 
+      <TextBox Text="{Binding Model.CotMessage}" 
                      Name="CotMessage"
                      TextWrapping="Wrap" 
                      HorizontalContentAlignment="Center" 
@@ -118,31 +118,40 @@
                      Width="778"
                      HorizontalAlignment="Left" 
                      Height="32"/>
-        </StackPanel>
+      <TextBox Text="{Binding Model.ErrorMsg}" 
+               BorderThickness="0"
+               Name="ErrorMessage"
+               TextWrapping="Wrap" 
+               HorizontalContentAlignment="Center" 
+               Margin="-10,5,0,0" 
+               IsReadOnly="True" 
+               Width="900"
+               HorizontalAlignment="Left" 
+               Height="32" 
+               Foreground="Red"/>
+    </StackPanel>
+    <StackPanel Margin="20,120,20,135">
 
-        <StackPanel Margin="20,120,20,135">
-
-            <ListView Height="515"
+      <ListView Height="515"
                       Width="984"
                       Name="ActiveBits"
                       HorizontalAlignment="Left"
                       SelectionMode="Multiple"
                       SelectionChanged="ActiveBits_OnSelectionChanged"
                       ItemsSource="{Binding Model.StatusBits}">
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <ItemsWrapGrid/>
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-                <ListView.ItemContainerStyle>
-                    <Style TargetType="ListViewItem">
-                        <Setter Property="MinWidth" Value="250"></Setter>
-                        <Setter Property="MinHeight" Value="31"></Setter>
-                        <Setter Property="MaxHeight" Value="31"></Setter>
-                    </Style>
-                </ListView.ItemContainerStyle>
-            </ListView>
-            <CheckBox Name="test" MinWidth="500"></CheckBox>
-        </StackPanel>
-    </Grid>
+        <ListView.ItemsPanel>
+          <ItemsPanelTemplate>
+            <ItemsWrapGrid/>
+          </ItemsPanelTemplate>
+        </ListView.ItemsPanel>
+        <ListView.ItemContainerStyle>
+          <Style TargetType="ListViewItem">
+            <Setter Property="MinWidth" Value="250"></Setter>
+            <Setter Property="MinHeight" Value="31"></Setter>
+            <Setter Property="MaxHeight" Value="31"></Setter>
+          </Style>
+        </ListView.ItemContainerStyle>
+      </ListView>
+    </StackPanel>
+  </Grid>
 </Page>

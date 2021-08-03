@@ -45,3 +45,5 @@ C:\Users\Lucas.Walkner\source\repos\Statusbits\obj\x86\Debug\ProjectArchitecture
 C:\Users\Lucas.Walkner\source\repos\Statusbits\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885238160000000.json
 C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Debug\BitDecryption.dll
 C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Debug\BitDecryption.pdb
+C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Debug\NLog.dll
+C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Debug\NLog.config
