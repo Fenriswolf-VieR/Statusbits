@@ -63,7 +63,9 @@ Diese Klasse funktioniert wie eine "View-Klasse" in einem MVP System. Die Klasse
 
 ## __Problem__
 
-Nach dem Kompilieren lässt sich die "Statusbits.exe"-Datei nicht öffnen. Das liegt vermutlich an Windows, weil ein leeres Projekt auch nicht startet. #TODO->Google
+Nach dem Kompilieren lässt sich die "Statusbits.exe"-Datei nicht öffnen. Das liegt vermutlich an Windows, weil ein leeres Projekt auch nicht startet. 
+
+
 Update: UWP-Apps lassen sich nicht als .exe starten. Sie werden als App im Startmenü hinzugefügt und ist dann auch startbar.
 
 Links: 
