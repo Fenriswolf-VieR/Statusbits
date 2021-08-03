@@ -6,7 +6,6 @@
 3. [Aufbau](#Aufbau)
 4. [Problem](#Problem)
 
----
 
 ## __About the Project__
 
@@ -18,7 +17,6 @@ Das ursprüngliche Programm wurde in "Lua" geschrieben. Um ein besser wartbares 
 <br/>
 <br/>
 
----
 
 ## __Funktion__
 
@@ -32,7 +30,6 @@ Beim Eingeben einer Zahl in die Textboxen werden automatisch alle anderen berech
 Bei einer falschen Eingabe (Wert ist zu groß, ungültige Zeichen) wird der Fehler in roter Schrift am unteren Rand angezeigt.
 <br/>
 
----
 
 ## __Aufbau__
 
@@ -61,7 +58,6 @@ In der "StatusbitsModel.cs" Klasse werden alle Variablen gespeichert und bereitg
 
 Diese Klasse funktioniert wie eine "View-Klasse" in einem MVP System. Die Klasse wird benutzt um die Eingaben des Benutzers an den Controller weiterzuleiten.
 
----
 
 ## __Problem__
 
