@@ -22,7 +22,7 @@ Das ursprüngliche Programm wurde in "Lua" geschrieben. Um ein besser wartbares 
 
 ## __Funktion__
 
-In dem "Scan From Clipboard" Auswahlfeld kann zwischen den Optionen "no", "hexadecimal", "decimal" und "binary" ausgewählt werden.
+In dem "Scan From Clipboard" Auswahlfeld kann zwischen den Optionen "no", "hexadecimal", "decimal" und "binary" ausgewählt werden. Über die zwei Buttons neben dem Auswahlfeld können die Bits umgestellt werden. 
 
 Wenn "no" ausgewählt wurde wird keine Eingabe von der Zwischenablage übernommen. Bei allen anderen Optionen wird immer, wenn die Zwischenablage aktualisiert wird, diese mit dem ausgewählten Zahlensystem kopiert und es werden alle anderen Werte berechnet.
 
