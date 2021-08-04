@@ -519,3 +519,5 @@ C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Properties\An
 C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Properties\AssemblyInfo.cs
 C:\Users\Lucas.Walkner\source\repos\Statusbits\obj\x86\Release\ilc\in\Properties\Annotations.cs
 C:\Users\Lucas.Walkner\source\repos\Statusbits\obj\x86\Release\ilc\in\Properties\AssemblyInfo.cs
+C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Assets\SmallTile.png
+C:\Users\Lucas.Walkner\source\repos\Statusbits\obj\x86\Release\ilc\in\Assets\SmallTile.png

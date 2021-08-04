@@ -28,20 +28,32 @@
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Debug\Statusbits.exe">
       <PackagePath>entrypoint\Statusbits.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\.nuget\packages\nlog\4.7.10\lib\netstandard2.0\NLog.dll">
-      <PackagePath>NLog.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\bin\Debug\netstandard2.0\BitDecryption.dll">
       <PackagePath>BitDecryption.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\.nuget\packages\nlog.config\4.7.10\contentFiles\any\any\NLog.config">
-      <PackagePath>NLog.config</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\BitDecryption.cs">
+      <PackagePath>BitDecryption.cs</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\App.xaml.cs">
+      <PackagePath>App.xaml.cs</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\MainPage.xaml.cs">
+      <PackagePath>MainPage.xaml.cs</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\Properties\Annotations.cs">
+      <PackagePath>Properties\Annotations.cs</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\Properties\AssemblyInfo.cs">
+      <PackagePath>Properties\AssemblyInfo.cs</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\Model\StatusbitsModel.cs">
+      <PackagePath>Model\StatusbitsModel.cs</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>

@@ -30,17 +30,13 @@
     <AppXManifest Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-03T08:35:12.829</Modified>
+      <Modified>2021-08-03T11:41:52.097</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Debug\Statusbits.exe">
       <PackagePath>entrypoint\Statusbits.exe</PackagePath>
-      <Modified>2021-08-03T08:35:12.197</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\.nuget\packages\nlog\4.7.10\lib\netstandard2.0\NLog.dll">
-      <PackagePath>NLog.dll</PackagePath>
-      <Modified>2021-05-14T12:27:46.000</Modified>
+      <Modified>2021-08-03T11:41:50.878</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -48,15 +44,35 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\bin\Debug\netstandard2.0\BitDecryption.dll">
       <PackagePath>BitDecryption.dll</PackagePath>
-      <Modified>2021-08-03T08:29:29.258</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\.nuget\packages\nlog.config\4.7.10\contentFiles\any\any\NLog.config">
-      <PackagePath>NLog.config</PackagePath>
-      <Modified>2021-05-14T12:27:20.000</Modified>
+      <Modified>2021-08-03T11:41:44.305</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-18T16:36:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\BitDecryption.cs">
+      <PackagePath>BitDecryption.cs</PackagePath>
+      <Modified>2021-08-02T11:58:55.094</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\App.xaml.cs">
+      <PackagePath>App.xaml.cs</PackagePath>
+      <Modified>2021-07-22T07:14:48.543</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\MainPage.xaml.cs">
+      <PackagePath>MainPage.xaml.cs</PackagePath>
+      <Modified>2021-08-03T09:45:49.051</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\Properties\Annotations.cs">
+      <PackagePath>Properties\Annotations.cs</PackagePath>
+      <Modified>2021-07-22T13:02:02.844</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\Properties\AssemblyInfo.cs">
+      <PackagePath>Properties\AssemblyInfo.cs</PackagePath>
+      <Modified>2021-07-22T07:14:48.547</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\Model\StatusbitsModel.cs">
+      <PackagePath>Model\StatusbitsModel.cs</PackagePath>
+      <Modified>2021-08-02T08:51:44.627</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -102,11 +118,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-08-03T08:35:12.114</Modified>
+      <Modified>2021-08-03T11:41:50.785</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-08-03T08:35:12.113</Modified>
+      <Modified>2021-08-03T11:41:50.785</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -114,11 +130,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-08-03T08:35:12.365</Modified>
+      <Modified>2021-08-03T11:41:51.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Debug\Core\Statusbits.exe">
       <PackagePath>Statusbits.exe</PackagePath>
-      <Modified>2021-08-03T08:35:12.824</Modified>
+      <Modified>2021-08-03T11:41:52.092</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
