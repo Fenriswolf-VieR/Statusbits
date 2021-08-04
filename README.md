@@ -65,5 +65,4 @@ Ein weiteres Problem stellt das Clipboard dar. Wenn die App im Hintergrund ausge
 Weiterführende Links: 
 + <https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.clipboard?view=winrt-20348#remarks>
 + <https://stackoverflow.com/questions/51714328/visual-studio-uwp-not-launching-when-clicking-the-executable-from-the-bin-direct>
-+ <https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide#secure> 
 + <https://stackoverflow.com/questions/58660743/uwp-app-crashes-when-clipboard-getcontent-is-called-from-inside-onnavigatedto>
