@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 using Windows.System;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
@@ -29,8 +28,6 @@ namespace Statusbits
         throw;
       }
     }
-
-    
 
     private async void Clipboard_ContentChanged(object sender, object e)
     {

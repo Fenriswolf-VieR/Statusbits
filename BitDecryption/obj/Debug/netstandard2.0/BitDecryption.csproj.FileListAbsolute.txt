@@ -7,3 +7,4 @@ C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\obj\Debug\netstanda
 C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\obj\Debug\netstandard2.0\BitDecryption.dll
 C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\obj\Debug\netstandard2.0\BitDecryption.pdb
 C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\obj\Debug\netstandard2.0\BitDecryption.csproj.AssemblyReference.cache
+C:\Users\Lucas.Walkner\source\repos\Statusbits\BitDecryption\bin\Debug\netstandard2.0\BitDecryption.cs

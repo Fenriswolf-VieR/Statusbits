@@ -31,6 +31,10 @@
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Assets\SmallTile.png">
+      <PackagePath>Assets\SmallTile.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>

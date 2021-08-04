@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\AppX</LayoutDir>
-    <RegisteredManifestChecksum>91DAD60D43BE89E3B506B4925238030816EF1C3C36D3258435F3BCB53F650D69</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>3C53AFEFFCD2E5CC77B72493018F0B4CCEACACE01D7E0FC26029136FA95A8E9A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>3fd5fe0d-429a-493b-abca-32b5e8df9cd9_1.0.0.0_x86__vhjfwqq8grrv8</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>3fd5fe0d-429a-493b-abca-32b5e8df9cd9_vhjfwqq8grrv8!App</RegisteredUserModeAppID>
     <RegisteredPackageID>3fd5fe0d-429a-493b-abca-32b5e8df9cd9</RegisteredPackageID>
@@ -30,7 +30,7 @@
     <AppXManifest Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-03T09:47:06.269</Modified>
+      <Modified>2021-08-04T07:09:44.686</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -40,27 +40,32 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2021-07-22T07:07:03.482</Modified>
+      <Modified>2021-08-04T07:00:09.280</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Assets\SmallTile.png">
+      <PackagePath>Assets\SmallTile.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-08-04T07:08:50.309</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-07-22T07:07:03.485</Modified>
+      <Modified>2021-08-04T07:03:45.381</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-07-22T07:07:03.486</Modified>
+      <Modified>2021-08-04T06:58:20.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-07-22T07:07:03.486</Modified>
+      <Modified>2021-08-04T06:56:03.976</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-02T12:30:54.042</Modified>
+      <Modified>2021-08-04T06:54:29.517</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
@@ -70,7 +75,7 @@
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-07-22T07:07:03.488</Modified>
+      <Modified>2021-08-04T07:00:32.704</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\BitDecryption.cs">
       <PackagePath>BitDecryption.cs</PackagePath>
@@ -82,7 +87,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\MainPage.xaml.cs">
       <PackagePath>MainPage.xaml.cs</PackagePath>
-      <Modified>2021-08-03T09:45:49.051</Modified>
+      <Modified>2021-08-04T06:37:55.230</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Model\StatusbitsModel.cs">
       <PackagePath>Model\StatusbitsModel.cs</PackagePath>
@@ -98,19 +103,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-08-03T09:46:54.725</Modified>
+      <Modified>2021-08-04T07:09:34.155</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Statusbits.dll">
       <PackagePath>Statusbits.dll</PackagePath>
-      <Modified>2021-08-03T09:47:06.138</Modified>
+      <Modified>2021-08-04T07:09:44.559</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Statusbits.exe">
       <PackagePath>Statusbits.exe</PackagePath>
-      <Modified>2021-08-03T09:47:06.259</Modified>
+      <Modified>2021-08-04T07:09:44.676</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Release\ilc\Statusbits.pdb">
       <PackagePath>Statusbits.pdb</PackagePath>
-      <Modified>2021-08-03T09:47:06.258</Modified>
+      <Modified>2021-08-04T07:09:44.675</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
