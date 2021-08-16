@@ -31,12 +31,13 @@ Bei einer falschen Eingabe (Wert ist zu groß, ungültige Zeichen) wird der Fehl
 ## __Aufbau__
 
 Das Programm basiert auf einer Model-View-Presenter (MVP) architektur. "MainPage.xaml.cs" kann dabei als "View" angesehen werden, "StatusbitsController.cs" als "Presenter" und "StatusbitsModel.cs" als "Model".
-Die Klasse "BitDecryption.cs" dient als Library um die Werte in alle Zahlensysteme umzurechnen.
+Die Klasse "BitDecryption.cs" dient als Library um die Werte in alle Zahlensysteme umzurechnen und die Klasse HotkeyWindow dient als Subservice, welcher die Änderungen des Clipboards übergibt da Statusbits als UWP app nicht aus dem Hintergrund darauf zugreifen kann. 
 
 __Klassen__
 + StatusbitsController.cs
 + StatusbitsModel.cs
 + BitDecryption.cs
++ HotkeyWindow.cs
 + MainPage.xaml.cs
 
 *__StatusbitsController.cs__*
@@ -51,18 +52,10 @@ In der "StatusbitsModel.cs" Klasse werden alle Variablen gespeichert und bereitg
 
 "BitDecryption.cs" wird als Library zum Berechnen von Dezimal-, Hexadezimal-, und Binärzahlen und der ausgewählten Checkboxen verwendet.
 
+*__HotkeyWindow.cs__*
+
+"HotkeyWindow.cs" wird als Subservice zum Anliefern der Clipboardänderungen verwendet.
+
 *__MainPage.xaml.cs__*
 
 Diese Klasse funktioniert wie eine "View-Klasse" in einem MVP System. Die Klasse wird benutzt um die Eingaben des Benutzers an den Controller weiterzuleiten.
-
-
-## __Problem__
-
-UWP-Apps lassen sich nicht als ".exe" starten. Sie werden als App im Startmenü hinzugefügt und sind darüber startbar.
-Ein weiteres Problem stellt das Clipboard dar. Wenn die App im Hintergrund ausgeführt und die Zwischenablage aktualisiert wird stürzt die App ab. Das Programm muss im Vordergrund laufen.
-
-
-Weiterführende Links: 
-+ <https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.clipboard?view=winrt-20348#remarks>
-+ <https://stackoverflow.com/questions/51714328/visual-studio-uwp-not-launching-when-clicking-the-executable-from-the-bin-direct>
-+ <https://stackoverflow.com/questions/58660743/uwp-app-crashes-when-clipboard-getcontent-is-called-from-inside-onnavigatedto>
