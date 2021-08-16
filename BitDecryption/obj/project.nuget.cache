@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HRYSvgtcWURawr2H2YfPCl1xfHnh+p8ODwVrhkDI5q6aAuRTkrVu7QdQgN2e86mdbTeNpTntm3AQuhWZutB0ng==",
+  "dgSpecHash": "kd/ewDh+3VcP1bH4hdJyEF/0oOrtqAQHpuxzA8Q/P6PY7Yp4EnthIonSkzPnCGS8/XI0/ZveM4Dj8fZvk5cWHA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rene.Viehhauser\\Source\\Repos\\Statusbits\\BitDecryption\\BitDecryption.csproj",
+  "projectFilePath": "C:\\Users\\Rene.Viehhauser\\source\\repos\\Statusbits\\BitDecryption\\BitDecryption.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rene.Viehhauser\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Rene.Viehhauser\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

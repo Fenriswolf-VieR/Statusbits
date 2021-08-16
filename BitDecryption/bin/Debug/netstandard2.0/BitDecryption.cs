@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Globalization;
 using System.Text.RegularExpressions;
 
 namespace BitDecryption
 {
-  public class BitDecryption
+    public class BitDecryption
   {
     private string binary;
     private string hex;
