@@ -5,8 +5,6 @@ using System.Diagnostics;
 using Statusbits.Model;
 using Windows.ApplicationModel.Resources;
 
-//using WK.Libraries.SharpClipboardNS;
-
 namespace Statusbits.Controller
 {
   class StatusbitsController

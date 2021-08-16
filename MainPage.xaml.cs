@@ -5,6 +5,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml;
 using Statusbits.Controller;
 using Windows.ApplicationModel.DataTransfer;
+using Windows.ApplicationModel.ExtendedExecution;
 
 
 namespace Statusbits
@@ -40,8 +41,7 @@ namespace Statusbits
       }
     }
 
-
-    private void ClipboardType_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ClipboardType_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
       Clipboard.ContentChanged -= Clipboard_ContentChanged;
       if (ClipboardType.SelectedItem.ToString() != "no")

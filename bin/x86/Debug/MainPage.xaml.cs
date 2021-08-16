@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 using Windows.System;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml;
 using Statusbits.Controller;
 using Windows.ApplicationModel.DataTransfer;
+using Windows.ApplicationModel.ExtendedExecution;
 
 
 namespace Statusbits
@@ -30,10 +30,10 @@ namespace Statusbits
       }
     }
 
-    
-
     private async void Clipboard_ContentChanged(object sender, object e)
     {
+            //AppListEntry.LaunchAsync();
+            //OnExtendedMode(null,null);
       var dataPackageView = Clipboard.GetContent();
       if (dataPackageView.Contains(StandardDataFormats.Text))
       {
@@ -43,8 +43,42 @@ namespace Statusbits
       }
     }
 
+     /*async void OnExtendedMode(object sender, RoutedEventArgs e)
+     {
+        if (this.extendedExecutionSession == null){
+            this.extendedExecutionSession = new ExtendedExecutionSession(){
+                Reason = ExtendedExecutionReason.Unspecified, // Change!
+                Description = "general playing around"
+            };
+            this.extendedExecutionSession.Revoked += OnExtensionRevoked;
 
-    private void ClipboardType_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+            var result = await this.extendedExecutionSession.RequestExtensionAsync();
+
+             if (result == ExtendedExecutionResult.Allowed){
+                // We're running extended.
+             }
+             else{
+                // We're not.
+                this.OnUnextendedMode(null, null);
+             }
+        }
+     }
+
+     void OnExtensionRevoked(object sender, ExtendedExecutionRevokedEventArgs args){
+        this.OnUnextendedMode(null, null);
+     }
+     void OnUnextendedMode(object sender, RoutedEventArgs e)
+     {
+        if (this.extendedExecutionSession != null){
+            this.extendedExecutionSession.Dispose();
+            this.extendedExecutionSession = null;
+        }
+     }
+
+     ExtendedExecutionSession extendedExecutionSession;*/
+
+
+        private void ClipboardType_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
       Clipboard.ContentChanged -= Clipboard_ContentChanged;
       if (ClipboardType.SelectedItem.ToString() != "no")

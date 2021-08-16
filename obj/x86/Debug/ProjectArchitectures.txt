@@ -1,1 +1,1 @@
-C:\Users\Lucas.Walkner\source\repos\Statusbits\Statusbits.csproj;x86
+C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\Statusbits.csproj;x86
