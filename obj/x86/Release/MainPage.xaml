@@ -1,0 +1,158 @@
+﻿<Page
+    x:Class="Statusbits.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignHeight="805">
+
+  <Grid>
+
+    <MenuBar VerticalAlignment="Top">
+      <MenuBarItem Title="Language">
+        <MenuFlyoutItem x:ConnectionId='19' Name="en" Text="English"/>
+      </MenuBarItem>
+      <MenuBarItem Title="Version">
+        <MenuFlyoutItem x:ConnectionId='13' Name="v1000" Text="1000"                      />
+        <MenuFlyoutItem x:ConnectionId='14' Name="v820" Text="820"                     />
+        <MenuFlyoutItem x:ConnectionId='15' Name="v810" Text="810"                     />
+        <MenuFlyoutItem x:ConnectionId='16' Name="v800" Text="800"                     />
+        <MenuFlyoutItem x:ConnectionId='17' Name="v760" Text="760"                     />
+        <MenuFlyoutItem x:ConnectionId='18' Name="v750" Text="750"                     />
+      </MenuBarItem>
+    </MenuBar>
+
+    <StackPanel Margin="15,50,20,650">
+      <ComboBox x:ConnectionId='10' Header="Scan from Clipboard:"
+                      Name="ClipboardType"
+                      Width="200"
+                      Height="56"
+                      ItemsSource="{Binding Model.ClipboardOptions}" 
+                      SelectedIndex="0" 
+                                                                         />
+      <RadioButton x:ConnectionId='11' x:Name="Bit64" Content="64 Bit" Margin="240,-33,0,0" VerticalAlignment="Top" Height="30" Width="60"                           IsChecked="True" MinWidth="70"/>
+      <RadioButton x:ConnectionId='12' x:Name="Bit32" Content="32 Bit" Margin="320,-33,0,0" VerticalAlignment="Top" Height="30" Width="50"                           MinWidth="70"/>
+      <TextBox Text="Version:" 
+               Width="70"
+               BorderThickness="0"
+               IsReadOnly="True"
+               Margin="600,-32,0,0"></TextBox>
+      <TextBox Text="{Binding Model.Version}" 
+                      BorderThickness="0"
+                      IsReadOnly="True"
+                      Margin="817,-32,0,0" 
+                     Width="200"
+                      Height="32">
+      </TextBox>
+    </StackPanel>
+
+    <StackPanel Margin="20,635,20,20">
+      <TextBox x:ConnectionId='3' Text="{Binding Model.Values[0]}" 
+                     Name="DecimalTB"
+                                                  
+                     TextWrapping="Wrap" 
+                     Width="215"
+                     Margin="0,0,0,0" 
+                     Header="Decimal:" 
+                     HorizontalAlignment="Left" 
+                     VerticalAlignment="Top"
+                     Height="56"
+                                                      />
+      <TextBox x:ConnectionId='4' Text="{Binding Model.Values[1]}" 
+                     Name="SignedDecimalTB"
+                                                        
+                     TextWrapping="Wrap" 
+                     Width="175" 
+                     Header="Signed Decimal:" 
+                     HorizontalContentAlignment="Center" 
+                     Margin="180,-56,0,0" 
+                     HorizontalAlignment="Left" 
+                     VerticalAlignment="Top" 
+                     UseLayoutRounding="False" 
+                     Height="56"
+                     Visibility="Collapsed"
+                                                            />
+      <TextBox x:ConnectionId='5' Text="{Binding Model.Values[2]}"
+                     Name="HexadecimalTB"
+                                                      
+                     TextWrapping="Wrap" 
+                     Width="175" 
+                     Header="Hexadecimal:"
+                     HorizontalContentAlignment="Center"
+                     Margin="220,-56,0,0"  
+                     HorizontalAlignment="Left" 
+                     VerticalAlignment="Top" 
+                     UseLayoutRounding="False" 
+                     Height="56"
+                                                          />
+      <TextBox x:ConnectionId='6' Text="{Binding Model.Values[3]}" 
+                     Name="BinaryTB"
+                                                 
+                     TextWrapping="Wrap" 
+                     Header="Binary:" 
+                     Width="583"
+                     HorizontalContentAlignment="Center"
+                     Margin="400,-56,0,0" 
+                     UseLayoutRounding="False" 
+                     HorizontalAlignment="Left" 
+                     Height="56"
+                                                     />
+      <TextBox x:ConnectionId='7' Text="{Binding Model.CotValue}" 
+                     Name="CotValue"
+                     TextWrapping="Wrap" 
+                     Width="200" 
+                     Header="Cause of transmission:" 
+                     HorizontalContentAlignment="Center" 
+                     Margin="0,0,0,0" 
+                     IsReadOnly="True" 
+                     HorizontalAlignment="Left" 
+                     VerticalAlignment="Top" 
+                     Height="56"/>
+      <TextBox x:ConnectionId='8' Text="{Binding Model.CotMessage}" 
+                     Name="CotMessage"
+                     TextWrapping="Wrap" 
+                     HorizontalContentAlignment="Center" 
+                     Margin="205,-32,0,0" 
+                     IsReadOnly="True" 
+                     Width="778"
+                     HorizontalAlignment="Left" 
+                     Height="32"/>
+      <TextBox x:ConnectionId='9' Text="{Binding Model.ErrorMsg}" 
+               BorderThickness="0"
+               Name="ErrorMessage"
+               TextWrapping="Wrap" 
+               HorizontalContentAlignment="Center" 
+               Margin="-10,5,0,0" 
+               IsReadOnly="True" 
+               Width="900"
+               HorizontalAlignment="Left" 
+               Height="32" 
+               Foreground="Red"/>
+    </StackPanel>
+    <StackPanel Margin="20,120,20,135">
+
+      <ListView x:ConnectionId='2' Height="515"
+                      Width="984"
+                      Name="ActiveBits"
+                      HorizontalAlignment="Left"
+                      SelectionMode="Multiple"
+                                                                      
+                      ItemsSource="{Binding Model.StatusBits}">
+        <ListView.ItemsPanel>
+          <ItemsPanelTemplate>
+            <ItemsWrapGrid/>
+          </ItemsPanelTemplate>
+        </ListView.ItemsPanel>
+        <ListView.ItemContainerStyle>
+          <Style TargetType="ListViewItem">
+            <Setter Property="MinWidth" Value="250"></Setter>
+            <Setter Property="MinHeight" Value="31"></Setter>
+            <Setter Property="MaxHeight" Value="31"></Setter>
+          </Style>
+        </ListView.ItemContainerStyle>
+      </ListView>
+    </StackPanel>
+  </Grid>
+</Page>
+

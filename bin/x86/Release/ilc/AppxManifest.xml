@@ -37,9 +37,9 @@
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v5.0" />
     <build:Item Name="VisualStudio" Version="16.0" />
-    <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Enterprise 2019" />
-    <build:Item Name="OperatingSystem" Version="10.0.18362.1 (WinBuild.160101.0800)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="16.0.31515.66" />
+    <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2019" />
+    <build:Item Name="OperatingSystem" Version="10.0.19041.1 (WinBuild.160101.0800)" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="16.0.31603.221" />
     <build:Item Name="ProjectGUID" Value="{34BA1CAD-1AAC-4AC8-9C2E-A2E1CD567452}" />
     <build:Item Name="ilc.exe" Version="2.2.29722.00 built by: PROJECTNREL" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="10.0.18362.1" />
@@ -56,6 +56,7 @@
     <build:Item Name="AlignMethodsAtMinimalBoundaries" Value="false" />
     <build:Item Name="LargeAddressAware" Value="false" />
     <build:Item Name="NoLinkerSymbols" Value="false" />
+    <build:Item Name="WindowsDesktop" Version="10.0.17134.0" />
     <build:Item Name="MakePri.exe" Version="10.0.18362.1 (WinBuild.160101.0800)" />
   </build:Metadata>
 </Package>

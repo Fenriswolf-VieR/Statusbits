@@ -420,6 +420,20 @@ namespace __Interop
 	/// </summary>
 	public unsafe static partial class kernel32_dll
 	{
+		// Signature, GetCurrentProcessId, [fwd] [return] [EETypeRva:0x000419B0] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Diagnostics.Process, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Kernel32", "GetCurrentProcessId")]
+		public static uint GetCurrentProcessId()
+		{
+			// Setup
+			uint unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.kernel32_dll_PInvokes.GetCurrentProcessId();
+			global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+			// Return
+			return unsafe___value;
+		}
+
 		// Signature, GetCPInfoExW, [fwd] [return] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x000419B0] uint__unsigned int, [fwd] [in] [EETypeRva:0x000419B0] uint__unsigned int, [fwd] [in] [EETypeRva:0x000419B0] __Interop_Kernel32_CPINFOEXW__System_Text_Encoding_CodePages___ptr__Interop_Kernel32_CPINFOEXW__System_Text_Encoding_CodePages *, 
 		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Text.Encoding.CodePages, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Kernel32", "GetCPInfoExW")]
 		public static int GetCPInfoExW(
@@ -439,6 +453,195 @@ namespace __Interop
 			global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
 			// Return
 			return unsafe___value;
+		}
+
+		// Signature, GetCurrentProcess, [fwd] [return] [EETypeRva:0x000434A4] Microsoft_Win32_SafeHandles_SafeProcessHandle__System_Diagnostics_Process____w64 int, 
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Diagnostics.Process, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Kernel32", "GetCurrentProcess")]
+		public static global::Microsoft.Win32.SafeHandles.SafeProcessHandle__System_Diagnostics_Process GetCurrentProcess()
+		{
+			// Setup
+			global::Microsoft.Win32.SafeHandles.SafeProcessHandle__System_Diagnostics_Process __value;
+			global::System.IntPtr unsafe___value;
+			// Marshalling
+			__value = new global::Microsoft.Win32.SafeHandles.SafeProcessHandle__System_Diagnostics_Process();
+			global::System.Runtime.InteropServices.McgMarshal.ClearLastWin32Error();
+			// Call to native method
+			unsafe___value = global::__Interop.kernel32_dll_PInvokes.GetCurrentProcess();
+			global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								__value, 
+								unsafe___value
+							);
+			// Return
+			return __value;
+		}
+
+		// Signature, GetProcessId, [fwd] [return] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x000434A4] Microsoft_Win32_SafeHandles_SafeProcessHandle__System_Diagnostics_Process____w64 int, 
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Diagnostics.Process, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Kernel32", "GetProcessId")]
+		public static int GetProcessId(global::Microsoft.Win32.SafeHandles.SafeProcessHandle__System_Diagnostics_Process nativeHandle)
+		{
+			// Setup
+			bool addRefed = false;
+			int unsafe___value;
+			// Marshalling
+			nativeHandle.DangerousAddRef(ref addRefed);
+			// Call to native method
+			unsafe___value = global::__Interop.kernel32_dll_PInvokes.GetProcessId(nativeHandle.DangerousGetHandle());
+			global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+			if (addRefed)
+				nativeHandle.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, GetExitCodeProcess, [fwd] [return] [EETypeRva:0x00040848] bool__System.Boolean, [fwd] [in] [EETypeRva:0x000434A4] Microsoft_Win32_SafeHandles_SafeProcessHandle__System_Diagnostics_Process____w64 int, [fwd] [out] [managedbyref] [nativebyref] [EETypeRva:0x000419B0] int__int, 
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Diagnostics.Process, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Kernel32", "GetExitCodeProcess")]
+		public static bool GetExitCodeProcess(
+					global::Microsoft.Win32.SafeHandles.SafeProcessHandle__System_Diagnostics_Process processHandle, 
+					out int exitCode)
+		{
+			// Setup
+			bool addRefed = false;
+			int unsafe___value;
+			// Marshalling
+			processHandle.DangerousAddRef(ref addRefed);
+			fixed (int* pinned_exitCode = &(exitCode))
+			{
+				global::System.Runtime.InteropServices.McgMarshal.ClearLastWin32Error();
+				// Call to native method
+				unsafe___value = global::__Interop.kernel32_dll_PInvokes.GetExitCodeProcess(
+									processHandle.DangerousGetHandle(), 
+									pinned_exitCode
+								);
+				global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+				global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			}
+			if (addRefed)
+				processHandle.DangerousRelease();
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, CloseHandle, [fwd] [return] [EETypeRva:0x00040848] bool__System.Boolean, [fwd] [in] [EETypeRva:0x000419B0] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Diagnostics.Process, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Kernel32", "CloseHandle")]
+		public static bool CloseHandle(global::System.IntPtr handle)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			global::System.Runtime.InteropServices.McgMarshal.ClearLastWin32Error();
+			// Call to native method
+			unsafe___value = global::__Interop.kernel32_dll_PInvokes.CloseHandle(handle);
+			global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, DuplicateHandle, [fwd] [return] [EETypeRva:0x00040848] bool__System.Boolean, [fwd] [in] [EETypeRva:0x000434A4] Microsoft_Win32_SafeHandles_SafeProcessHandle__System_Diagnostics_Process____w64 int, [fwd] [in] [EETypeRva:0x000434A4] System_Runtime_InteropServices_SafeHandle____w64 int, [fwd] [in] [EETypeRva:0x000434A4] Microsoft_Win32_SafeHandles_SafeProcessHandle__System_Diagnostics_Process____w64 int, [fwd] [out] [managedbyref] [nativebyref] [EETypeRva:0x000434A4] Microsoft_Win32_SafeHandles_SafeWaitHandle__System_Private_CoreLib____w64 int, [fwd] [in] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x00040848] bool__System.Boolean, [fwd] [in] [EETypeRva:0x000419B0] int__int, 
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Diagnostics.Process, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Kernel32", "DuplicateHandle")]
+		public static bool DuplicateHandle(
+					global::Microsoft.Win32.SafeHandles.SafeProcessHandle__System_Diagnostics_Process hSourceProcessHandle, 
+					global::System.Runtime.InteropServices.SafeHandle hSourceHandle, 
+					global::Microsoft.Win32.SafeHandles.SafeProcessHandle__System_Diagnostics_Process hTargetProcess, 
+					out global::Microsoft.Win32.SafeHandles.SafeWaitHandle__System_Private_CoreLib targetHandle, 
+					int dwDesiredAccess, 
+					bool bInheritHandle, 
+					int dwOptions)
+		{
+			// Setup
+			bool addRefed = false;
+			bool addRefed_1 = false;
+			bool addRefed_2 = false;
+			global::System.IntPtr unsafe_targetHandle;
+			int unsafe___value;
+			// Marshalling
+			hSourceProcessHandle.DangerousAddRef(ref addRefed);
+			hSourceHandle.DangerousAddRef(ref addRefed_1);
+			hTargetProcess.DangerousAddRef(ref addRefed_2);
+			targetHandle = new global::Microsoft.Win32.SafeHandles.SafeWaitHandle__System_Private_CoreLib();
+			unsafe_targetHandle = targetHandle.DangerousGetHandle();
+			global::System.Runtime.InteropServices.McgMarshal.ClearLastWin32Error();
+			// Call to native method
+			unsafe___value = global::__Interop.kernel32_dll_PInvokes.DuplicateHandle(
+								hSourceProcessHandle.DangerousGetHandle(), 
+								hSourceHandle.DangerousGetHandle(), 
+								hTargetProcess.DangerousGetHandle(), 
+								&(unsafe_targetHandle), 
+								dwDesiredAccess, 
+								(bInheritHandle ? 1 : 0), 
+								dwOptions
+							);
+			global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								targetHandle, 
+								unsafe_targetHandle
+							);
+			if (addRefed_2)
+				hTargetProcess.DangerousRelease();
+			if (addRefed_1)
+				hSourceHandle.DangerousRelease();
+			if (addRefed)
+				hSourceProcessHandle.DangerousRelease();
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, GetComputerName, [fwd] [return] [EETypeRva:0x000419B0] int__int, [fwd] [in] [out] [managedbyref] [nativebyref] [EETypeRva:0x000418E8] char__wchar_t, [fwd] [in] [out] [managedbyref] [nativebyref] [EETypeRva:0x000419B0] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Diagnostics.Process, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Kernel32", "GetComputerName")]
+		public static int GetComputerName(
+					ref char lpBuffer, 
+					ref uint nSize)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			fixed (char* pinned_lpBuffer = &(lpBuffer))
+			{
+				ushort* unsafe_pinned_lpBuffer = (ushort*)pinned_lpBuffer;
+				fixed (uint* pinned_nSize = &(nSize))
+				{
+					// Call to native method
+					unsafe___value = global::__Interop.kernel32_dll_PInvokes.GetComputerName(
+										unsafe_pinned_lpBuffer, 
+										pinned_nSize
+									);
+					global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+				}
+			}
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, OpenProcess, [fwd] [return] [EETypeRva:0x000434A4] Microsoft_Win32_SafeHandles_SafeProcessHandle__System_Diagnostics_Process____w64 int, [fwd] [in] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x00040848] bool__System.Boolean, [fwd] [in] [EETypeRva:0x000419B0] int__int, 
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Diagnostics.Process, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Kernel32", "OpenProcess")]
+		public static global::Microsoft.Win32.SafeHandles.SafeProcessHandle__System_Diagnostics_Process OpenProcess(
+					int access, 
+					bool inherit, 
+					int processId)
+		{
+			// Setup
+			global::Microsoft.Win32.SafeHandles.SafeProcessHandle__System_Diagnostics_Process __value;
+			global::System.IntPtr unsafe___value;
+			// Marshalling
+			__value = new global::Microsoft.Win32.SafeHandles.SafeProcessHandle__System_Diagnostics_Process();
+			global::System.Runtime.InteropServices.McgMarshal.ClearLastWin32Error();
+			// Call to native method
+			unsafe___value = global::__Interop.kernel32_dll_PInvokes.OpenProcess(
+								access, 
+								(inherit ? 1 : 0), 
+								processId
+							);
+			global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								__value, 
+								unsafe___value
+							);
+			// Return
+			return __value;
 		}
 
 		// Signature, GetStdHandle, [fwd] [return] [EETypeRva:0x000419B0] System_IntPtr____w64 int, [fwd] [in] [EETypeRva:0x000419B0] int__int, 
@@ -609,6 +812,75 @@ namespace __Interop
 			return unsafe___value != 0;
 		}
 
+		// Signature, FormatMessage, [fwd] [return] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x000419B0] System_IntPtr____w64 int, [fwd] [in] [EETypeRva:0x000419B0] uint__unsigned int, [fwd] [in] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x000419B0] char___ptrwchar_t *, [fwd] [in] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x00042A40] rg_System_IntPtr____w64 int *, 
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.Win32.Primitives, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Kernel32", "FormatMessage")]
+		public static int FormatMessage(
+					int dwFlags, 
+					global::System.IntPtr lpSource, 
+					uint dwMessageId, 
+					int dwLanguageId, 
+					char* lpBuffer, 
+					int nSize, 
+					global::System.IntPtr[] arguments)
+		{
+			// Setup
+			global::System.IntPtr* unsafe_arguments;
+			int unsafe___value;
+			// Marshalling
+			fixed (global::System.IntPtr* pinned_arguments = ((arguments != null 
+						&& arguments.Length == 0) ? new global::System.IntPtr[1] : arguments))
+			{
+				unsafe_arguments = (global::System.IntPtr*)pinned_arguments;
+				global::System.Runtime.InteropServices.McgMarshal.ClearLastWin32Error();
+				// Call to native method
+				unsafe___value = global::__Interop.kernel32_dll_PInvokes.FormatMessage(
+									dwFlags, 
+									lpSource, 
+									dwMessageId, 
+									dwLanguageId, 
+									((ushort*)lpBuffer), 
+									nSize, 
+									unsafe_arguments
+								);
+				global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+				global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			}
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, EnumProcesses, [fwd] [return] [EETypeRva:0x00040848] bool__System.Boolean, [fwd] [in] [EETypeRva:0x00042A40] rg_int__int *, [fwd] [in] [EETypeRva:0x000419B0] int__int, [fwd] [out] [managedbyref] [nativebyref] [EETypeRva:0x000419B0] int__int, 
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Diagnostics.Process, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Kernel32", "EnumProcesses")]
+		public static bool EnumProcesses(
+					int[] processIds, 
+					int size, 
+					out int needed)
+		{
+			// Setup
+			int* unsafe_processIds;
+			int unsafe___value;
+			// Marshalling
+			fixed (int* pinned_processIds = ((processIds != null 
+						&& processIds.Length == 0) ? new int[1] : processIds))
+			{
+				unsafe_processIds = (int*)pinned_processIds;
+				fixed (int* pinned_needed = &(needed))
+				{
+					global::System.Runtime.InteropServices.McgMarshal.ClearLastWin32Error();
+					// Call to native method
+					unsafe___value = global::__Interop.kernel32_dll_PInvokes.EnumProcesses(
+										unsafe_processIds, 
+										size, 
+										pinned_needed
+									);
+					global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+					global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+				}
+			}
+			// Return
+			return unsafe___value != 0;
+		}
+
 		// Signature, GetConsoleCP, [fwd] [return] [EETypeRva:0x000419B0] uint__unsigned int, 
 		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Console, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Kernel32", "GetConsoleCP")]
 		public static uint GetConsoleCP()
@@ -728,9 +1000,9 @@ namespace __Interop
 			return unsafe___value != 0;
 		}
 
-		// Signature, FormatMessage, [fwd] [return] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x000419B0] System_IntPtr____w64 int, [fwd] [in] [EETypeRva:0x000419B0] uint__unsigned int, [fwd] [in] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x000419B0] char___ptrwchar_t *, [fwd] [in] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x00042A40] rg_System_IntPtr____w64 int *, 
+		// Signature, FormatMessage__0, [fwd] [return] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x000419B0] System_IntPtr____w64 int, [fwd] [in] [EETypeRva:0x000419B0] uint__unsigned int, [fwd] [in] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x000419B0] char___ptrwchar_t *, [fwd] [in] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x00042A40] rg_System_IntPtr____w64 int *, 
 		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Console, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Kernel32", "FormatMessage")]
-		public static int FormatMessage(
+		public static int FormatMessage__0(
 					int dwFlags, 
 					global::System.IntPtr lpSource, 
 					uint dwMessageId, 
@@ -749,7 +1021,7 @@ namespace __Interop
 				unsafe_arguments = (global::System.IntPtr*)pinned_arguments;
 				global::System.Runtime.InteropServices.McgMarshal.ClearLastWin32Error();
 				// Call to native method
-				unsafe___value = global::__Interop.kernel32_dll_PInvokes.FormatMessage(
+				unsafe___value = global::__Interop.kernel32_dll_PInvokes.FormatMessage__0(
 									dwFlags, 
 									lpSource, 
 									dwMessageId, 
@@ -763,6 +1035,129 @@ namespace __Interop
 			}
 			// Return
 			return unsafe___value;
+		}
+	}
+
+	/// <summary>
+	/// P/Invoke class for module 'advapi32.dll'
+	/// </summary>
+	public unsafe static partial class advapi32_dll
+	{
+		// Signature, LookupPrivilegeValue, [fwd] [return] [EETypeRva:0x00040848] bool__System.Boolean, [fwd] [in] [EETypeRva:0x00041B44] string__wchar_t *, [fwd] [in] [EETypeRva:0x00041B44] string__wchar_t *, [fwd] [out] [managedbyref] [nativebyref] [EETypeRva:0x0004314C] __Interop_Advapi32_LUID__System_Diagnostics_Process____Interop_Advapi32_LUID__System_Diagnostics_Process, 
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Diagnostics.Process, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Advapi32", "LookupPrivilegeValue")]
+		public static bool LookupPrivilegeValue(
+					string lpSystemName, 
+					string lpName, 
+					out global::_.Interop_Advapi32_LUID__System_Diagnostics_Process lpLuid)
+		{
+			// Setup
+			ushort* unsafe_lpSystemName = default(ushort*);
+			ushort* unsafe_lpName = default(ushort*);
+			int unsafe___value;
+			// Marshalling
+			fixed (char* pinned_lpSystemName = lpSystemName)
+			{
+				unsafe_lpSystemName = (ushort*)pinned_lpSystemName;
+				fixed (char* pinned_lpName = lpName)
+				{
+					unsafe_lpName = (ushort*)pinned_lpName;
+					fixed (global::_.Interop_Advapi32_LUID__System_Diagnostics_Process* pinned_lpLuid = &(lpLuid))
+					{
+						global::System.Runtime.InteropServices.McgMarshal.ClearLastWin32Error();
+						// Call to native method
+						unsafe___value = global::__Interop.advapi32_dll_PInvokes.LookupPrivilegeValue(
+											unsafe_lpSystemName, 
+											unsafe_lpName, 
+											pinned_lpLuid
+										);
+						global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+						global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+					}
+				}
+			}
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, OpenProcessToken, [fwd] [return] [EETypeRva:0x00040848] bool__System.Boolean, [fwd] [in] [EETypeRva:0x000434A4] Microsoft_Win32_SafeHandles_SafeProcessHandle__System_Diagnostics_Process____w64 int, [fwd] [in] [EETypeRva:0x000419B0] int__int, [fwd] [out] [managedbyref] [nativebyref] [EETypeRva:0x000434A4] Microsoft_Win32_SafeHandles_SafeTokenHandle__System_Diagnostics_Process____w64 int, 
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Diagnostics.Process, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Advapi32", "OpenProcessToken")]
+		public static bool OpenProcessToken(
+					global::Microsoft.Win32.SafeHandles.SafeProcessHandle__System_Diagnostics_Process ProcessHandle, 
+					int DesiredAccess, 
+					out global::Microsoft.Win32.SafeHandles.SafeTokenHandle__System_Diagnostics_Process TokenHandle)
+		{
+			// Setup
+			bool addRefed = false;
+			global::System.IntPtr unsafe_TokenHandle;
+			int unsafe___value;
+			// Marshalling
+			ProcessHandle.DangerousAddRef(ref addRefed);
+			TokenHandle = new global::Microsoft.Win32.SafeHandles.SafeTokenHandle__System_Diagnostics_Process();
+			unsafe_TokenHandle = TokenHandle.DangerousGetHandle();
+			global::System.Runtime.InteropServices.McgMarshal.ClearLastWin32Error();
+			// Call to native method
+			unsafe___value = global::__Interop.advapi32_dll_PInvokes.OpenProcessToken(
+								ProcessHandle.DangerousGetHandle(), 
+								DesiredAccess, 
+								&(unsafe_TokenHandle)
+							);
+			global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								TokenHandle, 
+								unsafe_TokenHandle
+							);
+			if (addRefed)
+				ProcessHandle.DangerousRelease();
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, AdjustTokenPrivileges, [fwd] [return] [EETypeRva:0x00040848] bool__System.Boolean, [fwd] [in] [EETypeRva:0x000434A4] Microsoft_Win32_SafeHandles_SafeTokenHandle__System_Diagnostics_Process____w64 int, [fwd] [in] [EETypeRva:0x00040848] bool__System.Boolean, [fwd] [in] [EETypeRva:0x00043084] __Interop_Advapi32_TokenPrivileges__System_Diagnostics_Process____Interop_Advapi32_TokenPrivileges__System_Diagnostics_Process *, [fwd] [in] [EETypeRva:0x000419B0] int__int, [fwd] [in] [EETypeRva:0x000419B0] System_IntPtr____w64 int, [fwd] [in] [EETypeRva:0x000419B0] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Diagnostics.Process, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Advapi32", "AdjustTokenPrivileges")]
+		public static bool AdjustTokenPrivileges(
+					global::Microsoft.Win32.SafeHandles.SafeTokenHandle__System_Diagnostics_Process TokenHandle, 
+					bool DisableAllPrivileges, 
+					global::_.Interop_Advapi32_TokenPrivileges__System_Diagnostics_Process NewState, 
+					int BufferLength, 
+					global::System.IntPtr PreviousState, 
+					global::System.IntPtr ReturnLength)
+		{
+			// Setup
+			bool addRefed = false;
+			global::_.Interop_Advapi32_TokenPrivileges__System_Diagnostics_Process__Impl.UnsafeType* unsafe_NewState = default(global::_.Interop_Advapi32_TokenPrivileges__System_Diagnostics_Process__Impl.UnsafeType*);
+			int unsafe___value;
+			try
+			{
+				// Marshalling
+				TokenHandle.DangerousAddRef(ref addRefed);
+				unsafe_NewState = (global::_.Interop_Advapi32_TokenPrivileges__System_Diagnostics_Process__Impl.UnsafeType*)global::System.Runtime.InteropServices.McgMarshal.CoTaskMemAllocAndZeroMemory(new global::System.IntPtr(sizeof(global::_.Interop_Advapi32_TokenPrivileges__System_Diagnostics_Process__Impl.UnsafeType)));
+				global::_.Interop_Advapi32_TokenPrivileges__System_Diagnostics_Process__Impl.Marshal__SafeToUnsafe(
+									NewState, 
+									out (*(unsafe_NewState))
+								);
+				global::System.Runtime.InteropServices.McgMarshal.ClearLastWin32Error();
+				// Call to native method
+				unsafe___value = global::__Interop.advapi32_dll_PInvokes.AdjustTokenPrivileges(
+									TokenHandle.DangerousGetHandle(), 
+									(DisableAllPrivileges ? 1 : 0), 
+									unsafe_NewState, 
+									BufferLength, 
+									PreviousState, 
+									ReturnLength
+								);
+				global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+				global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+				if (addRefed)
+					TokenHandle.DangerousRelease();
+				// Return
+				return unsafe___value != 0;
+			}
+			finally
+			{
+				// Cleanup
+				global::System.Runtime.InteropServices.McgMarshal.SafeCoTaskMemFree(unsafe_NewState);
+			}
 		}
 	}
 
@@ -961,10 +1356,48 @@ namespace __Interop
 	public unsafe static partial class kernel32_dll_PInvokes
 	{
 		[global::System.Runtime.InteropServices.DllImport("kernel32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static uint GetCurrentProcessId();
+
+		[global::System.Runtime.InteropServices.DllImport("kernel32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static int GetCPInfoExW(
 					uint CodePage, 
 					uint dwFlags, 
 					global::_.Interop_Kernel32_CPINFOEXW__System_Text_Encoding_CodePages* lpCPInfoEx);
+
+		[global::System.Runtime.InteropServices.DllImport("kernel32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::System.IntPtr GetCurrentProcess();
+
+		[global::System.Runtime.InteropServices.DllImport("kernel32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int GetProcessId(global::System.IntPtr nativeHandle);
+
+		[global::System.Runtime.InteropServices.DllImport("kernel32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int GetExitCodeProcess(
+					global::System.IntPtr processHandle, 
+					int* exitCode);
+
+		[global::System.Runtime.InteropServices.DllImport("kernel32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int CloseHandle(global::System.IntPtr handle);
+
+		[global::System.Runtime.InteropServices.DllImport("kernel32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int DuplicateHandle(
+					global::System.IntPtr hSourceProcessHandle, 
+					global::System.IntPtr hSourceHandle, 
+					global::System.IntPtr hTargetProcess, 
+					global::System.IntPtr* targetHandle, 
+					int dwDesiredAccess, 
+					int bInheritHandle, 
+					int dwOptions);
+
+		[global::System.Runtime.InteropServices.DllImport("kernel32.dll", EntryPoint="GetComputerNameW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int GetComputerName(
+					ushort* lpBuffer, 
+					uint* nSize);
+
+		[global::System.Runtime.InteropServices.DllImport("kernel32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::System.IntPtr OpenProcess(
+					int access, 
+					int inherit, 
+					int processId);
 
 		[global::System.Runtime.InteropServices.DllImport("kernel32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static global::System.IntPtr GetStdHandle(int nStdHandle);
@@ -1007,6 +1440,22 @@ namespace __Interop
 					int* lpNumberOfCharsWritten, 
 					global::System.IntPtr lpReservedMustBeNull);
 
+		[global::System.Runtime.InteropServices.DllImport("kernel32.dll", EntryPoint="FormatMessageW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int FormatMessage(
+					int dwFlags, 
+					global::System.IntPtr lpSource, 
+					uint dwMessageId, 
+					int dwLanguageId, 
+					ushort* lpBuffer, 
+					int nSize, 
+					global::System.IntPtr* arguments);
+
+		[global::System.Runtime.InteropServices.DllImport("kernel32.dll", EntryPoint="K32EnumProcesses", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int EnumProcesses(
+					int* processIds, 
+					int size, 
+					int* needed);
+
 		[global::System.Runtime.InteropServices.DllImport("kernel32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static uint GetConsoleCP();
 
@@ -1042,7 +1491,7 @@ namespace __Interop
 					int* mode);
 
 		[global::System.Runtime.InteropServices.DllImport("kernel32.dll", EntryPoint="FormatMessageW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
-		public extern static int FormatMessage(
+		public extern static int FormatMessage__0(
 					int dwFlags, 
 					global::System.IntPtr lpSource, 
 					uint dwMessageId, 
@@ -1050,6 +1499,30 @@ namespace __Interop
 					ushort* lpBuffer, 
 					int nSize, 
 					global::System.IntPtr* arguments);
+	}
+
+	public unsafe static partial class advapi32_dll_PInvokes
+	{
+		[global::System.Runtime.InteropServices.DllImport("advapi32.dll", EntryPoint="LookupPrivilegeValueW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int LookupPrivilegeValue(
+					ushort* lpSystemName, 
+					ushort* lpName, 
+					global::_.Interop_Advapi32_LUID__System_Diagnostics_Process* lpLuid);
+
+		[global::System.Runtime.InteropServices.DllImport("advapi32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int OpenProcessToken(
+					global::System.IntPtr ProcessHandle, 
+					int DesiredAccess, 
+					global::System.IntPtr* TokenHandle);
+
+		[global::System.Runtime.InteropServices.DllImport("advapi32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int AdjustTokenPrivileges(
+					global::System.IntPtr TokenHandle, 
+					int DisableAllPrivileges, 
+					global::_.Interop_Advapi32_TokenPrivileges__System_Diagnostics_Process__Impl.UnsafeType* NewState, 
+					int BufferLength, 
+					global::System.IntPtr PreviousState, 
+					global::System.IntPtr ReturnLength);
 	}
 
 	public unsafe static partial class api_ms_win_core_com_l1_1_0_dll_PInvokes

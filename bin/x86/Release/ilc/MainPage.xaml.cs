@@ -1,20 +1,26 @@
 ﻿using System;
+using System.Diagnostics;
 using Windows.System;
+using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Navigation;
 using Statusbits.Controller;
-using Windows.ApplicationModel.DataTransfer;
-
+using Windows.ApplicationModel;
+using Windows.ApplicationModel.AppService;
+using Windows.Foundation.Collections;
+using Windows.Foundation.Metadata;
+using Windows.Storage;
 
 namespace Statusbits
 {
-  public sealed partial class MainPage : Page
+    public sealed partial class MainPage : Page
   {
     private StatusbitsController controller;
+    private bool allowed_to_recieve = false;
 
-    public MainPage()
-    {
+    public MainPage(){
       try
       {
         controller = new StatusbitsController(64);
@@ -29,24 +35,12 @@ namespace Statusbits
       }
     }
 
-    private async void Clipboard_ContentChanged(object sender, object e)
-    {
-      var dataPackageView = Clipboard.GetContent();
-      if (dataPackageView.Contains(StandardDataFormats.Text))
-      {
-        var value = await dataPackageView.GetTextAsync();
-
-        controller.UpdateValues(value, ClipboardType.SelectionBoxItem.ToString(), ActiveBits.SelectedItems);
-      }
-    }
-
-
     private void ClipboardType_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-      Clipboard.ContentChanged -= Clipboard_ContentChanged;
+      allowed_to_recieve = false;
       if (ClipboardType.SelectedItem.ToString() != "no")
       {
-        Clipboard.ContentChanged += Clipboard_ContentChanged;
+        allowed_to_recieve = true;
       }
     }
 
@@ -142,5 +136,41 @@ namespace Statusbits
     {
       controller.UpdateStatusbitsFromVersion("750");
     }
-  }
+
+    private void AppServiceConnected(object sender, Windows.ApplicationModel.AppService.AppServiceTriggerDetails e)
+    {
+        e.AppServiceConnection.RequestReceived += AppServiceConnection_RequestReceived;
+    }
+    private async void AppServiceConnection_RequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
+    {
+        if (allowed_to_recieve)
+        {
+            AppServiceDeferral messageDeferral = args.GetDeferral();
+            string id = (string)args.Request.Message["ID"];
+            await this.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                controller.UpdateValues(id, ClipboardType.SelectionBoxItem.ToString(), ActiveBits.SelectedItems);
+            });
+            await args.Request.SendResponseAsync(new ValueSet());
+            messageDeferral.Complete();
+
+            // we no longer need the connection
+            App.AppServiceDeferral.Complete();
+            App.Connection = null;
+        }  
+    }
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+    {
+        base.OnNavigatedTo(e);
+
+        if (ApiInformation.IsApiContractPresent("Windows.ApplicationModel.FullTrustAppContract", 1, 0))
+        {
+            Process process = Process.GetCurrentProcess();
+            ApplicationData.Current.LocalSettings.Values["processID"] = process.Id;
+
+            App.AppServiceConnected += AppServiceConnected;
+            await FullTrustProcessLauncher.LaunchFullTrustProcessForCurrentAppAsync();
+        }
+    }
+    }
 }

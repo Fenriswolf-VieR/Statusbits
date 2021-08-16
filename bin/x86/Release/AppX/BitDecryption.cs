@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Globalization;
 using System.Text.RegularExpressions;
 
 namespace BitDecryption
 {
-  public class BitDecryption
+    public class BitDecryption
   {
     private string binary;
     private string hex;
@@ -28,7 +26,7 @@ namespace BitDecryption
       Bit32 = 32
     }
 
-    private void validateValue(string value, BaseType baseType)
+    private void ValidateValue(string value, BaseType baseType)
     {
       if (!Regex.IsMatch(value, "^[01]+$") && baseType == BaseType.Binary)
       {
@@ -53,7 +51,7 @@ namespace BitDecryption
       }
 
       value = value.Replace(" ", "");
-      validateValue(value, baseType);
+      ValidateValue(value, baseType);
 
       UInt64 unsignedDecValue;
 
