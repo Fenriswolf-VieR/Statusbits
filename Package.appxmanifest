@@ -16,7 +16,7 @@
   <Properties>
     <DisplayName>Statusbits</DisplayName>
     <PublisherDisplayName>Lucas.Walkner</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <Logo>Assets1\StoreLogo.png</Logo>
   </Properties>
 
   <Dependencies>
@@ -33,12 +33,17 @@
       EntryPoint="Statusbits.App">
       <uap:VisualElements
         DisplayName="Statusbits"
-        Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png"
+        Square150x150Logo="Assets1\Square150x150Logo.png"
+        Square44x44Logo="Assets1\Square44x44Logo.png"
         Description="Statusbits"
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png"/>
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:DefaultTile Wide310x150Logo="Assets1\Wide310x150Logo.png" Square71x71Logo="Assets1\SmallTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile >
+        <uap:SplashScreen Image="Assets1\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
   </Applications>

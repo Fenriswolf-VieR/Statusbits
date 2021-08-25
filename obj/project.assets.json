@@ -8251,11 +8251,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rene.Viehhauser\\source\\repos\\Statusbits\\Statusbits.csproj",
+      "projectUniqueName": "C:\\Users\\Rene.Viehhauser\\Source\\Repos\\Statusbits\\Statusbits.csproj",
       "projectName": "Statusbits",
-      "projectPath": "C:\\Users\\Rene.Viehhauser\\source\\repos\\Statusbits\\Statusbits.csproj",
+      "projectPath": "C:\\Users\\Rene.Viehhauser\\Source\\Repos\\Statusbits\\Statusbits.csproj",
       "packagesPath": "C:\\Users\\Rene.Viehhauser\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rene.Viehhauser\\source\\repos\\Statusbits\\obj\\",
+      "outputPath": "C:\\Users\\Rene.Viehhauser\\Source\\Repos\\Statusbits\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8277,8 +8277,8 @@
       "frameworks": {
         "uap10.0.17763": {
           "projectReferences": {
-            "C:\\Users\\Rene.Viehhauser\\source\\repos\\Statusbits\\BitDecryption\\BitDecryption.csproj": {
-              "projectPath": "C:\\Users\\Rene.Viehhauser\\source\\repos\\Statusbits\\BitDecryption\\BitDecryption.csproj"
+            "C:\\Users\\Rene.Viehhauser\\Source\\Repos\\Statusbits\\BitDecryption\\BitDecryption.csproj": {
+              "projectPath": "C:\\Users\\Rene.Viehhauser\\Source\\Repos\\Statusbits\\BitDecryption\\BitDecryption.csproj"
             }
           }
         }

@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>3fd5fe0d-429a-493b-abca-32b5e8df9cd9</PackageIdentityName>
     <PackageIdentityPublisher>CN=Lucas.Walkner</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Rene.Viehhauser\source\repos\Statusbits\obj\x86\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\obj\x86\Release\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\AppX</LayoutDir>
-    <RegisteredManifestChecksum>148BA5A02BCDDCAED5A5B907A82972C8A3A62B93B2D77391087CDE4F0AEE24ED</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\AppX</LayoutDir>
+    <RegisteredManifestChecksum>26B4E83D95EEBA4F6394792B9BB38B71B4E98E82C0A5AA75C534EA408641020B</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>3fd5fe0d-429a-493b-abca-32b5e8df9cd9_1.0.0.0_x86__vhjfwqq8grrv8</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>3fd5fe0d-429a-493b-abca-32b5e8df9cd9_vhjfwqq8grrv8!App</RegisteredUserModeAppID>
     <RegisteredPackageID>3fd5fe0d-429a-493b-abca-32b5e8df9cd9</RegisteredPackageID>
@@ -27,95 +27,95 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-16T08:48:15.022</Modified>
+      <Modified>2021-08-25T12:15:34.712</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\App.xaml.cs">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\App.xaml.cs">
       <PackagePath>App.xaml.cs</PackagePath>
       <Modified>2021-08-16T07:39:29.863</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\LockScreenLogo.scale-200.png">
-      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets1\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2021-08-11T13:29:05.593</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\SmallTile.png">
-      <PackagePath>Assets\SmallTile.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\SmallTile.png">
+      <PackagePath>Assets1\SmallTile.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-08-11T13:29:05.595</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\SplashScreen.scale-200.png">
-      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\SplashScreen.scale-200.png">
+      <PackagePath>Assets1\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-08-11T13:29:05.600</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\Square150x150Logo.scale-200.png">
-      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets1\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-08-11T13:29:05.602</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\Square44x44Logo.scale-200.png">
-      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets1\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-08-11T13:29:05.602</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets1\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-08-11T13:29:05.603</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\StoreLogo.png">
+      <PackagePath>Assets1\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-08-11T13:29:05.603</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\Wide310x150Logo.scale-200.png">
-      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets1\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-08-11T13:29:05.604</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\BitDecryption.cs">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\BitDecryption.cs">
       <PackagePath>BitDecryption.cs</PackagePath>
-      <Modified>2021-08-16T07:38:17.689</Modified>
+      <Modified>2021-08-25T11:34:21.139</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\clrcompression.dll">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
       <Modified>2021-02-05T01:15:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\MainPage.xaml.cs">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\MainPage.xaml.cs">
       <PackagePath>MainPage.xaml.cs</PackagePath>
-      <Modified>2021-08-16T07:38:01.743</Modified>
+      <Modified>2021-08-25T11:48:12.595</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Model\StatusbitsModel.cs">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Model\StatusbitsModel.cs">
       <PackagePath>Model\StatusbitsModel.cs</PackagePath>
-      <Modified>2021-08-11T13:29:05.634</Modified>
+      <Modified>2021-08-25T09:26:05.587</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Properties\Annotations.cs">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Properties\Annotations.cs">
       <PackagePath>Properties\Annotations.cs</PackagePath>
       <Modified>2021-08-11T13:29:05.636</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Properties\AssemblyInfo.cs">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Properties\AssemblyInfo.cs">
       <PackagePath>Properties\AssemblyInfo.cs</PackagePath>
-      <Modified>2021-08-11T13:29:05.636</Modified>
+      <Modified>2021-08-23T09:40:36.807</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-08-16T08:21:26.572</Modified>
+      <Modified>2021-08-25T12:15:13.486</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Statusbits.dll">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Statusbits.dll">
       <PackagePath>Statusbits.dll</PackagePath>
-      <Modified>2021-08-16T08:48:14.698</Modified>
+      <Modified>2021-08-25T12:15:34.432</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Statusbits.exe">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Statusbits.exe">
       <PackagePath>Statusbits.exe</PackagePath>
-      <Modified>2021-08-16T08:48:14.978</Modified>
+      <Modified>2021-08-25T12:15:34.694</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Statusbits.pdb">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Statusbits.pdb">
       <PackagePath>Statusbits.pdb</PackagePath>
-      <Modified>2021-08-16T08:48:14.975</Modified>
+      <Modified>2021-08-25T12:15:34.692</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

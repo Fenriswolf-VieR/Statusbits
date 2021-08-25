@@ -61,13 +61,6 @@ C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Debug\Properties\Assembly
 C:\Users\Lucas.Walkner\source\repos\Statusbits\bin\x86\Debug\Model\StatusbitsModel.cs
 C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Debug\BitDecryption.cs
 C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Debug\Properties\Default.rd.xml
-C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Debug\Assets\LockScreenLogo.scale-200.png
-C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Debug\Assets\SplashScreen.scale-200.png
-C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Debug\Assets\Square150x150Logo.scale-200.png
-C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Debug\Assets\Square44x44Logo.scale-200.png
-C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Debug\Assets\Square44x44Logo.targetsize-24_altform-unplated.png
-C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Debug\Assets\StoreLogo.png
-C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Debug\Assets\Wide310x150Logo.scale-200.png
 C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Debug\App.xaml.cs
 C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Debug\MainPage.xaml.cs
 C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Debug\Properties\Annotations.cs
@@ -120,3 +113,10 @@ C:\Users\Rene.Viehhauser\source\repos\Statusbits\obj\x86\Debug\qualifiers.txt.in
 C:\Users\Rene.Viehhauser\source\repos\Statusbits\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Rene.Viehhauser\source\repos\Statusbits\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Rene.Viehhauser\source\repos\Statusbits\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885238160000000.json
+C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Debug\Assets1\LockScreenLogo.scale-200.png
+C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Debug\Assets1\SplashScreen.scale-200.png
+C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Debug\Assets1\Square150x150Logo.scale-200.png
+C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Debug\Assets1\Square44x44Logo.scale-200.png
+C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Debug\Assets1\Square44x44Logo.targetsize-24_altform-unplated.png
+C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Debug\Assets1\StoreLogo.png
+C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Debug\Assets1\Wide310x150Logo.scale-200.png

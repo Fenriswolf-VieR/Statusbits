@@ -268,10 +268,10 @@
     <value>T_UNSYNC</value>
   </data>
   <data name="54" xml:space="preserve">
-    <value>PR_Nr</value>
+    <value>PR_NR</value>
   </data>
   <data name="55" xml:space="preserve">
-    <value>RES55</value>
+    <value>T_DEV</value>
   </data>
   <data name="56" xml:space="preserve">
     <value>RES56</value>

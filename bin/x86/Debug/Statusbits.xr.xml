@@ -2,18 +2,30 @@
 <Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Model" />
-    <RootPropertyPathName Name="StatusBits" />
+    <RootPropertyPathName Name="StatusBits1" />
+    <RootPropertyPathName Name="StatusBits2" />
+    <RootPropertyPathName Name="StatusBits3" />
+    <RootPropertyPathName Name="StatusBits4" />
+    <RootPropertyPathName Name="StatusBits5" />
+    <RootPropertyPathName Name="StatusBits6" />
+    <RootPropertyPathName Name="StatusBits7" />
+    <RootPropertyPathName Name="StatusBits8" />
     <RootPropertyPathName Name="ErrorMsg" />
     <RootPropertyPathName Name="CotMessage" />
     <RootPropertyPathName Name="CotValue" />
+    <RootPropertyPathName Name="COT_Resources" />
     <RootPropertyPathName Name="Values" />
     <RootPropertyPathName Name="Version" />
+    <RootPropertyPathName Name="ScanClipboard_Resources" />
     <RootPropertyPathName Name="ClipboardOptions" />
+    <RootPropertyPathName Name="Version_Resources" />
+    <RootPropertyPathName Name="Language_Resources" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
@@ -37,7 +49,9 @@
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="ItemsPanel" />
       <RootProperty Name="ItemContainerStyle" />
+      <RootProperty Name="Margin" />
       <RootEvent Name="SelectionChanged" />
+      <RootEvent Name="ContainerContentChanging" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
@@ -58,6 +72,7 @@
       <RootProperty Name="Name" />
       <RootProperty Name="Text" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="FontFamily" />
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Header" />
@@ -67,22 +82,30 @@
       <RootProperty Name="HorizontalContentAlignment" />
       <RootProperty Name="UseLayoutRounding" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="TextAlignment" />
       <RootProperty Name="IsReadOnly" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="Foreground" />
       <RootEvent Name="KeyDown" />
       <RootEvent Name="LostFocus" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Text" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="Margin" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Name" />
       <RootProperty Name="Header" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
+      <RootProperty Name="FontFamily" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="SelectedIndex" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
+      <RootProperty Name="FontFamily" />
       <RootProperty Name="Content" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
@@ -94,11 +117,13 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.MenuBarItem">
       <RootProperty Name="Title" />
+      <RootProperty Name="FontFamily" />
       <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyoutItem">
       <RootProperty Name="Name" />
       <RootProperty Name="Text" />
+      <RootProperty Name="FontFamily" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Statusbits.MainPage" />

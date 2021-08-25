@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace BitDecryption
@@ -74,15 +75,16 @@ namespace BitDecryption
         case Bitness.Bit32:
           dec = Convert.ToString(unsignedDecValue & 0xffffffff);
           hex = Convert.ToString((long)unsignedDecValue & 0xffffffff, 16);
-          binary = Convert.ToString((long)unsignedDecValue & 0xffffffff, 2);
-          break;
+          binary = Convert.ToString((long)unsignedDecValue & 0xffffffff, 2).PadLeft(32, '0');
+                    break;
         case Bitness.Bit64:
           dec = Convert.ToString(unsignedDecValue);
           hex = Convert.ToString((long)unsignedDecValue, 16);
-          binary = Convert.ToString((long)unsignedDecValue, 2);
-          break;
+          binary = Convert.ToString((long)unsignedDecValue, 2).PadLeft(64, '0');
+                    break;
       }
-      return new List<string>() { dec, signedDec, hex, binary };
+      List<string> values = new List<string>() { dec, signedDec, hex, binary };
+      return FormatString(values);
     }
 
     //Update all Values from selected Checkboxes
@@ -104,17 +106,52 @@ namespace BitDecryption
 
       List<string> values = new List<string>();
       values = CalculateFromBase(decimalNumber.ToString(), bit, BaseType.Decimal);
-      return FormatString(values);
+      return values;
     }
 
-    public IList<object> CalculateActiveCheckboxes(List<string> allStatusBits, IList<object> items, string number, Bitness bit, BaseType baseType)
+    public IList<object> CalculateActiveCheckboxes(List<string> allStatusBits, IList<object> items8, IList<object> items7, IList<object> items6, IList<object> items5, IList<object> items4, IList<object> items3, IList<object> items2, IList<object> items1, string number, Bitness bit, BaseType baseType)
     {
-      for (int i = items.Count - 1; i >= 0; i--)
-      {
-        items.RemoveAt(i);
-      }
+          for (int i = items8.Count - 1; i >= 0; i--)
+          {
+            items8.RemoveAt(i);
+          }
 
-      if (string.IsNullOrEmpty(number))
+        for (int i = items7.Count - 1; i >= 0; i--)
+        {
+            items7.RemoveAt(i);
+        }
+
+        for (int i = items6.Count - 1; i >= 0; i--)
+        {
+            items6.RemoveAt(i);
+        }
+
+        for (int i = items5.Count - 1; i >= 0; i--)
+        {
+            items5.RemoveAt(i);
+        }
+
+        for (int i = items4.Count - 1; i >= 0; i--)
+        {
+            items4.RemoveAt(i);
+        }
+
+        for (int i = items3.Count - 1; i >= 0; i--)
+        {
+            items3.RemoveAt(i);
+        }
+
+        for (int i = items2.Count - 1; i >= 0; i--)
+        {
+            items2.RemoveAt(i);
+        }
+
+        for (int i = items1.Count - 1; i >= 0; i--)
+        {
+            items1.RemoveAt(i);
+        }
+
+        if (string.IsNullOrEmpty(number))
       {
         number = "0";
       }
@@ -132,13 +169,46 @@ namespace BitDecryption
       {
         if (unsignedDecValue % 2 == 1)
         {
-          items.Add(allStatusBits[(int)bit - 1 - index]);
+            switch (index / 8)
+            {
+                case (0):
+                    items1.Add(allStatusBits[(int)bit - 1 - index]);
+                    break;
+
+                case (1):
+                    items2.Add(allStatusBits[(int)bit - 1 - index]);
+                    break;
+
+                case (2):
+                    items3.Add(allStatusBits[(int)bit - 1 - index]);
+                    break;
+
+                case (3):
+                    items4.Add(allStatusBits[(int)bit - 1 - index]);
+                    break;
+
+                case (4):
+                    items5.Add(allStatusBits[(int)bit - 1 - index]);
+                    break;
+
+                case (5):
+                    items6.Add(allStatusBits[(int)bit - 1 - index]);
+                    break;
+
+                case (6):
+                    items7.Add(allStatusBits[(int)bit - 1 - index]);
+                    break;
+
+                case (7):
+                    items8.Add(allStatusBits[(int)bit - 1 - index]);
+                    break;
+            }
         }
 
         index++;
         unsignedDecValue /= 2;
       }
-      return items;
+      return items1.Concat(items2).Concat(items3).Concat(items4).Concat(items5).Concat(items6).Concat(items7).Concat(items8).ToList();
     }
     public int CalculateCOT(List<string> allStatusBits, IList<object> items)
     {

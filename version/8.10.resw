@@ -117,16 +117,196 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CauseOfTransmission" xml:space="preserve">
-    <value>Cause of Transmission</value>
+  <data name="0" xml:space="preserve">
+    <value>M1</value>
   </data>
-  <data name="Language" xml:space="preserve">
-    <value>Language</value>
+  <data name="1" xml:space="preserve">
+    <value>M2</value>
   </data>
-  <data name="ScanFromClipboard" xml:space="preserve">
-    <value>Scan from clipboard:</value>
+  <data name="10" xml:space="preserve">
+    <value>PROGRESS</value>
   </data>
-  <data name="Version" xml:space="preserve">
-    <value>Version</value>
+  <data name="11" xml:space="preserve">
+    <value>TIMEOUT</value>
+  </data>
+  <data name="12" xml:space="preserve">
+    <value>MAN_VAL</value>
+  </data>
+  <data name="13" xml:space="preserve">
+    <value>M14</value>
+  </data>
+  <data name="14" xml:space="preserve">
+    <value>M15</value>
+  </data>
+  <data name="15" xml:space="preserve">
+    <value>M16</value>
+  </data>
+  <data name="16" xml:space="preserve">
+    <value>GI</value>
+  </data>
+  <data name="17" xml:space="preserve">
+    <value>SPONT</value>
+  </data>
+  <data name="18" xml:space="preserve">
+    <value>INVALID</value>
+  </data>
+  <data name="19" xml:space="preserve">
+    <value>T_STD_E</value>
+  </data>
+  <data name="2" xml:space="preserve">
+    <value>M3</value>
+  </data>
+  <data name="20" xml:space="preserve">
+    <value>OFF</value>
+  </data>
+  <data name="21" xml:space="preserve">
+    <value>T_EXTERN</value>
+  </data>
+  <data name="22" xml:space="preserve">
+    <value>T_INTERN</value>
+  </data>
+  <data name="23" xml:space="preserve">
+    <value>N_SORTAB</value>
+  </data>
+  <data name="24" xml:space="preserve">
+    <value>FM_TR</value>
+  </data>
+  <data name="25" xml:space="preserve">
+    <value>RM_TR</value>
+  </data>
+  <data name="26" xml:space="preserve">
+    <value>INFO</value>
+  </data>
+  <data name="27" xml:space="preserve">
+    <value>ALT_VAL</value>
+  </data>
+  <data name="28" xml:space="preserve">
+    <value>RES28</value>
+  </data>
+  <data name="29" xml:space="preserve">
+    <value>N_UPDATE</value>
+  </data>
+  <data name="3" xml:space="preserve">
+    <value>M4</value>
+  </data>
+  <data name="30" xml:space="preserve">
+    <value>T_STD</value>
+  </data>
+  <data name="31" xml:space="preserve">
+    <value>RES31</value>
+  </data>
+  <data name="32" xml:space="preserve">
+    <value>COT0</value>
+  </data>
+  <data name="33" xml:space="preserve">
+    <value>COT1</value>
+  </data>
+  <data name="34" xml:space="preserve">
+    <value>COT2</value>
+  </data>
+  <data name="35" xml:space="preserve">
+    <value>COT3</value>
+  </data>
+  <data name="36" xml:space="preserve">
+    <value>COT4</value>
+  </data>
+  <data name="37" xml:space="preserve">
+    <value>COT5</value>
+  </data>
+  <data name="38" xml:space="preserve">
+    <value>N_CONF</value>
+  </data>
+  <data name="39" xml:space="preserve">
+    <value>TEST</value>
+  </data>
+  <data name="4" xml:space="preserve">
+    <value>M5</value>
+  </data>
+  <data name="40" xml:space="preserve">
+    <value>WR_ACK</value>
+  </data>
+  <data name="41" xml:space="preserve">
+    <value>WR_SUC</value>
+  </data>
+  <data name="42" xml:space="preserve">
+    <value>NORM</value>
+  </data>
+  <data name="43" xml:space="preserve">
+    <value>N_NORM</value>
+  </data>
+  <data name="44" xml:space="preserve">
+    <value>BL_870</value>
+  </data>
+  <data name="45" xml:space="preserve">
+    <value>SB_870</value>
+  </data>
+  <data name="46" xml:space="preserve">
+    <value>NT_870</value>
+  </data>
+  <data name="47" xml:space="preserve">
+    <value>OV_870</value>
+  </data>
+  <data name="48" xml:space="preserve">
+    <value>SE_870</value>
+  </data>
+  <data name="49" xml:space="preserve">
+    <value>T_INVAL</value>
+  </data>
+  <data name="5" xml:space="preserve">
+    <value>M6</value>
+  </data>
+  <data name="50" xml:space="preserve">
+    <value>CB_TRIP</value>
+  </data>
+  <data name="51" xml:space="preserve">
+    <value>CB_TR_I</value>
+  </data>
+  <data name="52" xml:space="preserve">
+    <value>OR_DRV</value>
+  </data>
+  <data name="53" xml:space="preserve">
+    <value>T_UNSYNC</value>
+  </data>
+  <data name="54" xml:space="preserve">
+    <value>PR_NR</value>
+  </data>
+  <data name="55" xml:space="preserve">
+    <value>RES55</value>
+  </data>
+  <data name="56" xml:space="preserve">
+    <value>RES56</value>
+  </data>
+  <data name="57" xml:space="preserve">
+    <value>RES57</value>
+  </data>
+  <data name="58" xml:space="preserve">
+    <value>RES58</value>
+  </data>
+  <data name="59" xml:space="preserve">
+    <value>RES59</value>
+  </data>
+  <data name="6" xml:space="preserve">
+    <value>M7</value>
+  </data>
+  <data name="60" xml:space="preserve">
+    <value>RES60</value>
+  </data>
+  <data name="61" xml:space="preserve">
+    <value>RES61</value>
+  </data>
+  <data name="62" xml:space="preserve">
+    <value>RES62</value>
+  </data>
+  <data name="63" xml:space="preserve">
+    <value>RES63</value>
+  </data>
+  <data name="7" xml:space="preserve">
+    <value>M8</value>
+  </data>
+  <data name="8" xml:space="preserve">
+    <value>NET_SEL</value>
+  </data>
+  <data name="9" xml:space="preserve">
+    <value>REVISION</value>
   </data>
 </root>

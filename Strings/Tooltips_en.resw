@@ -117,196 +117,205 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="0" xml:space="preserve">
-    <value>M1</value>
+  <data name="ALT_VAL" xml:space="preserve">
+    <value>Alternative value</value>
   </data>
-  <data name="1" xml:space="preserve">
-    <value>M2</value>
+  <data name="BL_870" xml:space="preserve">
+    <value>IEC 60870 status: blocked</value>
   </data>
-  <data name="10" xml:space="preserve">
-    <value>PROGRESS</value>
+  <data name="CB_TRIP" xml:space="preserve">
+    <value>Breaker tripping detected</value>
   </data>
-  <data name="11" xml:space="preserve">
-    <value>TIMEOUT</value>
+  <data name="CB_TR_I" xml:space="preserve">
+    <value>Breaker tripping detection inactive</value>
   </data>
-  <data name="12" xml:space="preserve">
-    <value>MAN_VAL</value>
+  <data name="COT0" xml:space="preserve">
+    <value>Cause of transmission bit 1</value>
   </data>
-  <data name="13" xml:space="preserve">
-    <value>M14</value>
+  <data name="COT1" xml:space="preserve">
+    <value>Cause of transmission bit 2</value>
   </data>
-  <data name="14" xml:space="preserve">
-    <value>M15</value>
+  <data name="COT2" xml:space="preserve">
+    <value>Cause of transmission bit 3</value>
   </data>
-  <data name="15" xml:space="preserve">
-    <value>M16</value>
+  <data name="COT3" xml:space="preserve">
+    <value>Cause of transmission bit 4</value>
   </data>
-  <data name="16" xml:space="preserve">
-    <value>GI</value>
+  <data name="COT4" xml:space="preserve">
+    <value>Cause of transmission bit 5</value>
   </data>
-  <data name="17" xml:space="preserve">
-    <value>SPONT</value>
+  <data name="COT5" xml:space="preserve">
+    <value>Cause of transmission bit 6</value>
   </data>
-  <data name="18" xml:space="preserve">
-    <value>INVALID</value>
+  <data name="FM_TR" xml:space="preserve">
+    <value>Fault message transformer value</value>
   </data>
-  <data name="19" xml:space="preserve">
-    <value>T_STD_E</value>
+  <data name="GI" xml:space="preserve">
+    <value>General interrogation</value>
   </data>
-  <data name="2" xml:space="preserve">
-    <value>M3</value>
+  <data name="INFO" xml:space="preserve">
+    <value>Information for variable</value>
   </data>
-  <data name="20" xml:space="preserve">
-    <value>OFF</value>
+  <data name="INVALID" xml:space="preserve">
+    <value>Invalid</value>
   </data>
-  <data name="21" xml:space="preserve">
-    <value>T_EXTERN</value>
+  <data name="M1" xml:space="preserve">
+    <value>User defined status no. 1</value>
   </data>
-  <data name="22" xml:space="preserve">
-    <value>T_INTERN</value>
+  <data name="M14" xml:space="preserve">
+    <value>User defined status no. 14</value>
   </data>
-  <data name="23" xml:space="preserve">
-    <value>N_SORTAB</value>
+  <data name="M15" xml:space="preserve">
+    <value>User defined status no. 15</value>
   </data>
-  <data name="24" xml:space="preserve">
-    <value>FM_TR</value>
+  <data name="M16" xml:space="preserve">
+    <value>User defined status no.16</value>
   </data>
-  <data name="25" xml:space="preserve">
-    <value>RM_TR</value>
+  <data name="M2" xml:space="preserve">
+    <value>User defined status no. 2</value>
   </data>
-  <data name="26" xml:space="preserve">
-    <value>INFO</value>
+  <data name="M3" xml:space="preserve">
+    <value>User defined status no. 3</value>
   </data>
-  <data name="27" xml:space="preserve">
-    <value>ALT_VAL</value>
+  <data name="M4" xml:space="preserve">
+    <value>User defined status no. 4</value>
   </data>
-  <data name="28" xml:space="preserve">
-    <value>RES28</value>
+  <data name="M5" xml:space="preserve">
+    <value>User defined status no. 5</value>
   </data>
-  <data name="29" xml:space="preserve">
-    <value>N_UPDATE</value>
+  <data name="M6" xml:space="preserve">
+    <value>User defined status no. 6</value>
   </data>
-  <data name="3" xml:space="preserve">
-    <value>M4</value>
+  <data name="M7" xml:space="preserve">
+    <value>User defined status no. 7</value>
   </data>
-  <data name="30" xml:space="preserve">
-    <value>T_STD</value>
+  <data name="M8" xml:space="preserve">
+    <value>User defined status no. 8</value>
   </data>
-  <data name="31" xml:space="preserve">
-    <value>RES31</value>
+  <data name="MAN_VAL" xml:space="preserve">
+    <value>Manual value</value>
   </data>
-  <data name="32" xml:space="preserve">
-    <value>COT0</value>
+  <data name="NET_SEL" xml:space="preserve">
+    <value>Select in network</value>
   </data>
-  <data name="33" xml:space="preserve">
-    <value>COT1</value>
+  <data name="NORM" xml:space="preserve">
+    <value>Normal status</value>
   </data>
-  <data name="34" xml:space="preserve">
-    <value>COT2</value>
+  <data name="NT_870" xml:space="preserve">
+    <value>IEC 60870 status: not typical</value>
   </data>
-  <data name="35" xml:space="preserve">
-    <value>COT3</value>
+  <data name="N_CONF" xml:space="preserve">
+    <value>Select was not confirmed by device  (IEC 60870 [P/N])</value>
   </data>
-  <data name="36" xml:space="preserve">
-    <value>COT4</value>
+  <data name="N_NORM" xml:space="preserve">
+    <value>Deviation to normal status</value>
   </data>
-  <data name="37" xml:space="preserve">
-    <value>COT5</value>
+  <data name="N_SORTAB" xml:space="preserve">
+    <value>Not sortable</value>
   </data>
-  <data name="38" xml:space="preserve">
-    <value>N_CONF</value>
+  <data name="N_UPDATE" xml:space="preserve">
+    <value>Not updated</value>
   </data>
-  <data name="39" xml:space="preserve">
-    <value>TEST</value>
+  <data name="OFF" xml:space="preserve">
+    <value>Switched off</value>
   </data>
-  <data name="4" xml:space="preserve">
-    <value>M5</value>
+  <data name="OR_DRV" xml:space="preserve">
+    <value>Value quality ‚Out of Range' (IEC 61850)</value>
   </data>
-  <data name="40" xml:space="preserve">
-    <value>WR_ACK</value>
+  <data name="OV_870" xml:space="preserve">
+    <value>IEC 60870 status: overflow</value>
   </data>
-  <data name="41" xml:space="preserve">
-    <value>WR_SUC</value>
+  <data name="PROGRESS" xml:space="preserve">
+    <value>In operation - command in progress</value>
   </data>
-  <data name="42" xml:space="preserve">
-    <value>NORM</value>
+  <data name="PR_NR" xml:space="preserve">
+    <value>Not recorded in Process Recorder</value>
   </data>
-  <data name="43" xml:space="preserve">
-    <value>N_NORM</value>
+  <data name="RES28" xml:space="preserve">
+    <value>Reserved for internal usage</value>
   </data>
-  <data name="44" xml:space="preserve">
-    <value>BL_870</value>
+  <data name="RES31" xml:space="preserve">
+    <value>Reserved for internal usage</value>
   </data>
-  <data name="45" xml:space="preserve">
-    <value>SB_870</value>
+  <data name="RES53" xml:space="preserve">
+    <value>reserved</value>
   </data>
-  <data name="46" xml:space="preserve">
-    <value>NT_870</value>
+  <data name="RES54" xml:space="preserve">
+    <value>reserved</value>
   </data>
-  <data name="47" xml:space="preserve">
-    <value>OV_870</value>
+  <data name="RES55" xml:space="preserve">
+    <value>reserved</value>
   </data>
-  <data name="48" xml:space="preserve">
-    <value>SE_870</value>
+  <data name="RES56" xml:space="preserve">
+    <value>reserved</value>
   </data>
-  <data name="49" xml:space="preserve">
-    <value>T_INVAL</value>
+  <data name="RES57" xml:space="preserve">
+    <value>reserved</value>
   </data>
-  <data name="5" xml:space="preserve">
-    <value>M6</value>
+  <data name="RES58" xml:space="preserve">
+    <value>reserved</value>
   </data>
-  <data name="50" xml:space="preserve">
-    <value>CB_TRIP</value>
+  <data name="RES59" xml:space="preserve">
+    <value>reserved</value>
   </data>
-  <data name="51" xml:space="preserve">
-    <value>CB_TR_I</value>
+  <data name="RES60" xml:space="preserve">
+    <value>reserved</value>
   </data>
-  <data name="52" xml:space="preserve">
-    <value>OR_DRV</value>
+  <data name="RES61" xml:space="preserve">
+    <value>reserved</value>
   </data>
-  <data name="53" xml:space="preserve">
-    <value>T_UNSYNC</value>
+  <data name="RES62" xml:space="preserve">
+    <value>reserved</value>
   </data>
-  <data name="54" xml:space="preserve">
-    <value>PR_Nr</value>
+  <data name="RES63" xml:space="preserve">
+    <value>reserved</value>
   </data>
-  <data name="55" xml:space="preserve">
-    <value>RES55</value>
+  <data name="REVISION" xml:space="preserve">
+    <value>Revision</value>
   </data>
-  <data name="56" xml:space="preserve">
-    <value>RES56</value>
+  <data name="RM_TR" xml:space="preserve">
+    <value>Run message transformer value</value>
   </data>
-  <data name="57" xml:space="preserve">
-    <value>RES57</value>
+  <data name="SB_870" xml:space="preserve">
+    <value>IEC 60870 status: substituted</value>
   </data>
-  <data name="58" xml:space="preserve">
-    <value>RES58</value>
+  <data name="SE_870" xml:space="preserve">
+    <value>IEC 60870 status: select</value>
   </data>
-  <data name="59" xml:space="preserve">
-    <value>RES59</value>
+  <data name="SPONT" xml:space="preserve">
+    <value>Spontaneous</value>
   </data>
-  <data name="6" xml:space="preserve">
-    <value>M7</value>
+  <data name="TEST" xml:space="preserve">
+    <value>Test bit (IEC 60870 [T])</value>
   </data>
-  <data name="60" xml:space="preserve">
-    <value>RES60</value>
+  <data name="TIMEOUT" xml:space="preserve">
+    <value>Command runtime exceeded</value>
   </data>
-  <data name="61" xml:space="preserve">
-    <value>RES61</value>
+  <data name="T_DEV" xml:space="preserve">
+    <value>Configured time difference between internal and external timestamp reached</value>
   </data>
-  <data name="62" xml:space="preserve">
-    <value>RES62</value>
+  <data name="T_EXTERN" xml:space="preserve">
+    <value>Realtime - external timestamp</value>
   </data>
-  <data name="63" xml:space="preserve">
-    <value>RES63</value>
+  <data name="T_INTERN" xml:space="preserve">
+    <value>Internal timestamp</value>
   </data>
-  <data name="7" xml:space="preserve">
-    <value>M8</value>
+  <data name="T_INVAL" xml:space="preserve">
+    <value>External timestamp invalid</value>
   </data>
-  <data name="8" xml:space="preserve">
-    <value>NET_SEL</value>
+  <data name="T_STD" xml:space="preserve">
+    <value>Winter time</value>
   </data>
-  <data name="9" xml:space="preserve">
-    <value>REVISION</value>
+  <data name="T_STD_E" xml:space="preserve">
+    <value>Standard time (winter) extern</value>
+  </data>
+  <data name="T_UNSYNC" xml:space="preserve">
+    <value>ClockNotSynchronized (IEC 61850)</value>
+  </data>
+  <data name="WR_ACK" xml:space="preserve">
+    <value>Writing acknowledged</value>
+  </data>
+  <data name="WR_SUC" xml:space="preserve">
+    <value>Writing successful</value>
   </data>
 </root>

@@ -10,83 +10,83 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>3fd5fe0d-429a-493b-abca-32b5e8df9cd9</PackageIdentityName>
     <PackageIdentityPublisher>CN=Lucas.Walkner</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Rene.Viehhauser\source\repos\Statusbits\obj\x86\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\obj\x86\Release\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\App.xaml.cs">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\App.xaml.cs">
       <PackagePath>App.xaml.cs</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\LockScreenLogo.scale-200.png">
-      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets1\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\SmallTile.png">
-      <PackagePath>Assets\SmallTile.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\SmallTile.png">
+      <PackagePath>Assets1\SmallTile.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\SplashScreen.scale-200.png">
-      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\SplashScreen.scale-200.png">
+      <PackagePath>Assets1\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\Square150x150Logo.scale-200.png">
-      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets1\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\Square44x44Logo.scale-200.png">
-      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets1\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets1\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\StoreLogo.png">
+      <PackagePath>Assets1\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Assets\Wide310x150Logo.scale-200.png">
-      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Assets1\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets1\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\BitDecryption.cs">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\BitDecryption.cs">
       <PackagePath>BitDecryption.cs</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\clrcompression.dll">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\MainPage.xaml.cs">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\MainPage.xaml.cs">
       <PackagePath>MainPage.xaml.cs</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Model\StatusbitsModel.cs">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Model\StatusbitsModel.cs">
       <PackagePath>Model\StatusbitsModel.cs</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Properties\Annotations.cs">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Properties\Annotations.cs">
       <PackagePath>Properties\Annotations.cs</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Properties\AssemblyInfo.cs">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Properties\AssemblyInfo.cs">
       <PackagePath>Properties\AssemblyInfo.cs</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Statusbits.dll">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Statusbits.dll">
       <PackagePath>Statusbits.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Statusbits.exe">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Statusbits.exe">
       <PackagePath>Statusbits.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\source\repos\Statusbits\bin\x86\Release\ilc\Statusbits.pdb">
+    <AppxPackagedFile Include="C:\Users\Rene.Viehhauser\Source\Repos\Statusbits\bin\x86\Release\ilc\Statusbits.pdb">
       <PackagePath>Statusbits.pdb</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

@@ -5,153 +5,326 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignHeight="805">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignHeight="806" Width="1168" >
 
-  <Grid>
+    <Grid>
 
-    <MenuBar VerticalAlignment="Top">
-      <MenuBarItem Title="Language">
-        <MenuFlyoutItem Name="en" Text="English"/>
-      </MenuBarItem>
-      <MenuBarItem Title="Version">
-        <MenuFlyoutItem Name="v1000" Text="1000" Click="V1000_OnClick"/>
-        <MenuFlyoutItem Name="v820" Text="820" Click="V820_OnClick"/>
-        <MenuFlyoutItem Name="v810" Text="810" Click="V810_OnClick"/>
-        <MenuFlyoutItem Name="v800" Text="800" Click="V800_OnClick"/>
-        <MenuFlyoutItem Name="v760" Text="760" Click="V760_OnClick"/>
-        <MenuFlyoutItem Name="v750" Text="750" Click="V750_OnClick"/>
-      </MenuBarItem>
-    </MenuBar>
+        <MenuBar VerticalAlignment="Top">
+            <MenuBarItem Title="{Binding Model.Language_Resources}" FontFamily="Consolas">
+                <MenuFlyoutItem Name="en" Text="English" Click="en_OnClick" FontFamily="Consolas"/>
+                <MenuFlyoutItem Name="de" Text="Deutsch" Click="de_OnClick" FontFamily="Consolas"/>
+            </MenuBarItem>
+            <MenuBarItem Title="{Binding Model.Version_Resources}" FontFamily="Consolas">
+                <MenuFlyoutItem Name="v1000" Text="10.00" Click="V1000_OnClick" FontFamily="Consolas"/>
+                <MenuFlyoutItem Name="v820" Text="8.20" Click="V820_OnClick" FontFamily="Consolas"/>
+                <MenuFlyoutItem Name="v810" Text="8.10" Click="V810_OnClick" FontFamily="Consolas"/>
+                <MenuFlyoutItem Name="v800" Text="8.00" Click="V800_OnClick" FontFamily="Consolas"/>
+                <MenuFlyoutItem Name="v760" Text="7.60" Click="V760_OnClick" FontFamily="Consolas"/>
+                <MenuFlyoutItem Name="v750" Text="7.50" Click="V750_OnClick" FontFamily="Consolas"/>
+            </MenuBarItem>
+        </MenuBar>
 
-    <StackPanel Margin="15,50,20,650">
-      <ComboBox Header="Scan from Clipboard:"
+        <StackPanel Margin="15,50,20,650">
+            <ComboBox Header="{Binding Model.ScanClipboard_Resources}"
                       Name="ClipboardType"
                       Width="200"
                       Height="56"
+                      FontFamily="Consolas"
                       ItemsSource="{Binding Model.ClipboardOptions}" 
                       SelectedIndex="0" 
                       SelectionChanged="ClipboardType_OnSelectionChanged"/>
-      <RadioButton x:Name="Bit64" Content="64 Bit" Margin="240,-33,0,0" VerticalAlignment="Top" Height="30" Width="60" Checked="Bit64_OnChecked" IsChecked="True" MinWidth="70"/>
-      <RadioButton x:Name="Bit32" Content="32 Bit" Margin="320,-33,0,0" VerticalAlignment="Top" Height="30" Width="50" Checked="Bit32_OnChecked" MinWidth="70"/>
-      <TextBox Text="Version:" 
+            <RadioButton x:Name="Bit64" FontFamily="Consolas" Content="64 Bit" Margin="240,-33,0,0" VerticalAlignment="Top" Height="30" Width="75" Checked="Bit64_OnChecked" IsChecked="True" MinWidth="75"/>
+            <RadioButton x:Name="Bit32" FontFamily="Consolas" Content="32 Bit" Margin="320,-33,0,0" VerticalAlignment="Top" Height="30" Width="75" Checked="Bit32_OnChecked" MinWidth="75"/>
+            <TextBox Text="version: " 
                Width="70"
                BorderThickness="0"
                IsReadOnly="True"
+               FontFamily="Consolas"
                Margin="600,-32,0,0"></TextBox>
-      <TextBox Text="{Binding Model.Version}" 
+            <TextBox Text="{Binding Model.Version}" 
                       BorderThickness="0"
                       IsReadOnly="True"
-                      Margin="817,-32,0,0" 
+                      FontFamily="Consolas"
+                      Margin="860,-32,0,0" 
                      Width="200"
                       Height="32">
-      </TextBox>
-    </StackPanel>
+            </TextBox>
+        </StackPanel>
 
-    <StackPanel Margin="20,635,20,20">
-      <TextBox Text="{Binding Model.Values[0]}" 
+        <StackPanel Margin="20,636,20,0">
+            <TextBox Text="{Binding Model.Values[0]}" 
                      Name="DecimalTB"
                      KeyDown="DecimalTB_OnKeyDown"
                      TextWrapping="Wrap" 
-                     Width="215"
+                     FontFamily="Consolas"
+                     Width="250"
                      Margin="0,0,0,0" 
                      Header="Decimal:" 
                      HorizontalAlignment="Left" 
                      VerticalAlignment="Top"
                      Height="56"
                      LostFocus="DecimalTB_OnLostFocus"/>
-      <TextBox Text="{Binding Model.Values[1]}" 
+            <TextBox Text="{Binding Model.Values[1]}" 
                      Name="SignedDecimalTB"
                      KeyDown="SignedDecimalTB_OnKeyDown"
                      TextWrapping="Wrap" 
-                     Width="175" 
+                     FontFamily="Consolas"
+                     Width="200" 
                      Header="Signed Decimal:" 
                      HorizontalContentAlignment="Center" 
-                     Margin="180,-56,0,0" 
+                     Margin="215,-56,0,0" 
                      HorizontalAlignment="Left" 
                      VerticalAlignment="Top" 
                      UseLayoutRounding="False" 
                      Height="56"
                      Visibility="Collapsed"
                      LostFocus="SignedDecimalTB_OnLostFocus"/>
-      <TextBox Text="{Binding Model.Values[2]}"
+            <TextBox Text="{Binding Model.Values[2]}"
                      Name="HexadecimalTB"
                      KeyDown="HexadecimalTB_OnKeyDown"
                      TextWrapping="Wrap" 
-                     Width="175" 
+                     FontFamily="Consolas"
+                     Width="200" 
                      Header="Hexadecimal:"
                      HorizontalContentAlignment="Center"
-                     Margin="220,-56,0,0"  
+                     Margin="255,-56,0,0"  
                      HorizontalAlignment="Left" 
                      VerticalAlignment="Top" 
                      UseLayoutRounding="False" 
                      Height="56"
                      LostFocus="HexadecimalTB_OnLostFocus"/>
-      <TextBox Text="{Binding Model.Values[3]}" 
+            <TextBox Text="{Binding Model.Values[3]}" 
                      Name="BinaryTB"
                      KeyDown="BinaryTB_OnKeyDown"
                      TextWrapping="Wrap" 
+                     TextAlignment="Right"
+                     FontFamily="Consolas"
                      Header="Binary:" 
-                     Width="583"
+                     Width="668"
                      HorizontalContentAlignment="Center"
-                     Margin="400,-56,0,0" 
+                     Margin="460,-56,0,0" 
                      UseLayoutRounding="False" 
                      HorizontalAlignment="Left" 
                      Height="56"
                      LostFocus="BinaryTB_OnLostFocus"/>
-      <TextBox Text="{Binding Model.CotValue}" 
+            <TextBlock Text="{Binding Model.COT_Resources}" FontFamily="Consolas" Margin="0,10,0,0"/>
+            <TextBox Text="{Binding Model.CotValue}" 
                      Name="CotValue"
                      TextWrapping="Wrap" 
-                     Width="200" 
-                     Header="Cause of transmission:" 
+                     Width="100" 
+                     FontFamily="Consolas" 
                      HorizontalContentAlignment="Center" 
                      Margin="0,0,0,0" 
                      IsReadOnly="True" 
                      HorizontalAlignment="Left" 
                      VerticalAlignment="Top" 
-                     Height="56"/>
-      <TextBox Text="{Binding Model.CotMessage}" 
+                     Height="36"/>
+            <TextBox Text="{Binding Model.CotMessage}" 
                      Name="CotMessage"
                      TextWrapping="Wrap" 
+                     FontFamily="Consolas"
                      HorizontalContentAlignment="Center" 
-                     Margin="205,-32,0,0" 
+                     Margin="105,-36,0,0" 
                      IsReadOnly="True" 
-                     Width="778"
+                     Width="1023"
                      HorizontalAlignment="Left" 
-                     Height="32"/>
-      <TextBox Text="{Binding Model.ErrorMsg}" 
+                     Height="36"/>
+            <TextBox Text="{Binding Model.ErrorMsg}" 
                BorderThickness="0"
                Name="ErrorMessage"
                TextWrapping="Wrap" 
+               FontFamily="Consolas"
                HorizontalContentAlignment="Center" 
                Margin="-10,5,0,0" 
                IsReadOnly="True" 
-               Width="900"
+               Width="1138"
                HorizontalAlignment="Left" 
-               Height="32" 
+               Height="24" 
                Foreground="Red"/>
-    </StackPanel>
-    <StackPanel Margin="20,120,20,135">
+        </StackPanel>
+        <StackPanel Margin="20,120,20,170">
 
-      <ListView Height="515"
-                      Width="984"
-                      Name="ActiveBits"
-                      HorizontalAlignment="Left"
-                      SelectionMode="Multiple"
-                      SelectionChanged="ActiveBits_OnSelectionChanged"
-                      ItemsSource="{Binding Model.StatusBits}">
-        <ListView.ItemsPanel>
-          <ItemsPanelTemplate>
-            <ItemsWrapGrid/>
-          </ItemsPanelTemplate>
-        </ListView.ItemsPanel>
-        <ListView.ItemContainerStyle>
-          <Style TargetType="ListViewItem">
-            <Setter Property="MinWidth" Value="250"></Setter>
-            <Setter Property="MinHeight" Value="31"></Setter>
-            <Setter Property="MaxHeight" Value="31"></Setter>
-          </Style>
-        </ListView.ItemContainerStyle>
-      </ListView>
-    </StackPanel>
-  </Grid>
+            <ListView Height="258"
+                    Width="282"
+                    Name="ActiveBits8"
+                    HorizontalAlignment="Left"
+                    SelectionMode="Multiple"
+                    SelectionChanged="ActiveBits_OnSelectionChanged"
+                    ContainerContentChanging="ActiveBits8_ContainerContentChanging"
+                    ItemsSource="{Binding Model.StatusBits8}">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="MinWidth" Value="250"></Setter>
+                        <Setter Property="MinHeight" Value="31"></Setter>
+                        <Setter Property="MaxHeight" Value="31"></Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+
+            <ListView Height="258"
+                Width="282"
+                Name="ActiveBits7"
+                HorizontalAlignment="Left"
+                SelectionMode="Multiple"
+                SelectionChanged="ActiveBits_OnSelectionChanged"
+                ContainerContentChanging="ActiveBits7_ContainerContentChanging"
+                ItemsSource="{Binding Model.StatusBits7}">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="MinWidth" Value="250"></Setter>
+                        <Setter Property="MinHeight" Value="31"></Setter>
+                        <Setter Property="MaxHeight" Value="31"></Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+
+            <ListView Height="258"
+                Width="282"
+                Margin="282,-774,0,0"
+                Name="ActiveBits6"
+                HorizontalAlignment="Left"
+                SelectionMode="Multiple"
+                SelectionChanged="ActiveBits_OnSelectionChanged"
+                ContainerContentChanging="ActiveBits6_ContainerContentChanging"
+                ItemsSource="{Binding Model.StatusBits6}">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="MinWidth" Value="250"></Setter>
+                        <Setter Property="MinHeight" Value="31"></Setter>
+                        <Setter Property="MaxHeight" Value="31"></Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+
+            <ListView Height="258"
+                Width="282"
+                Margin="282,-258,0,0"
+                Name="ActiveBits5"
+                HorizontalAlignment="Left"
+                SelectionMode="Multiple"
+                SelectionChanged="ActiveBits_OnSelectionChanged"
+                ContainerContentChanging="ActiveBits5_ContainerContentChanging"
+                ItemsSource="{Binding Model.StatusBits5}">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="MinWidth" Value="250"></Setter>
+                        <Setter Property="MinHeight" Value="31"></Setter>
+                        <Setter Property="MaxHeight" Value="31"></Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+
+            <ListView Height="258"
+                Width="282"
+                Margin="564,-774,0,0"
+                Name="ActiveBits4"
+                HorizontalAlignment="Left"
+                SelectionMode="Multiple"
+                SelectionChanged="ActiveBits_OnSelectionChanged"
+                ContainerContentChanging="ActiveBits4_ContainerContentChanging"
+                ItemsSource="{Binding Model.StatusBits4}">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="MinWidth" Value="250"></Setter>
+                        <Setter Property="MinHeight" Value="31"></Setter>
+                        <Setter Property="MaxHeight" Value="31"></Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+
+            <ListView Height="258"
+                Width="282"
+                Margin="564,-258,0,0"
+                Name="ActiveBits3"
+                HorizontalAlignment="Left"
+                SelectionMode="Multiple"
+                SelectionChanged="ActiveBits_OnSelectionChanged"
+                ContainerContentChanging="ActiveBits3_ContainerContentChanging"
+                ItemsSource="{Binding Model.StatusBits3}">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="MinWidth" Value="250"></Setter>
+                        <Setter Property="MinHeight" Value="31"></Setter>
+                        <Setter Property="MaxHeight" Value="31"></Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+
+            <ListView Height="258"
+                Width="282"
+                Margin="846,-774,0,0"
+                Name="ActiveBits2"
+                HorizontalAlignment="Left"
+                SelectionMode="Multiple"
+                SelectionChanged="ActiveBits_OnSelectionChanged"
+                ContainerContentChanging="ActiveBits2_ContainerContentChanging"
+                ItemsSource="{Binding Model.StatusBits2}">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="MinWidth" Value="250"></Setter>
+                        <Setter Property="MinHeight" Value="31"></Setter>
+                        <Setter Property="MaxHeight" Value="31"></Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+
+            <ListView Height="258"
+                Width="282"
+                Margin="846,-258,0,0"
+                Name="ActiveBits1"
+                HorizontalAlignment="Left"
+                SelectionMode="Multiple"
+                SelectionChanged="ActiveBits_OnSelectionChanged"
+                ContainerContentChanging="ActiveBits1_ContainerContentChanging"
+                ItemsSource="{Binding Model.StatusBits1}">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="MinWidth" Value="250"></Setter>
+                        <Setter Property="MinHeight" Value="31"></Setter>
+                        <Setter Property="MaxHeight" Value="31"></Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+        </StackPanel>
+    </Grid>
 </Page>
