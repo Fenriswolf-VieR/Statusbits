@@ -1,3 +1,21 @@
+
+# __Für die aktuelle Version gehen Sie bitte zu dem Fenriswolf-VieR/Statusbit repository. Dieses Repository ist nur als Backup gedacht!__
+- P
+- L
+- A
+- C
+- E
+- H
+- O
+- L
+- D
+- E
+- R
+- S
+- P
+- A
+- C
+- E
 # __Statusbits__
 
 ## Table of Contents
